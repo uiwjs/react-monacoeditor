@@ -148,7 +148,7 @@ Refer to [Monaco interface IEditor](https://microsoft.github.io/monaco-editor/ap
 
 ## Other
 
-- [react-codemirror](https://uiw-react.github.io/react-codemirror/) CodeMirror component for React.
+- [react-codemirror](https://uiw-react.github.io/react-codemirror/): CodeMirror component for React.
 
 ## License
 
