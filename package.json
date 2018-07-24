@@ -1,9 +1,10 @@
 {
-  "name": "react-monacoeditor",
-  "version": "1.0.0",
+  "name": "@uiw/react-monacoeditor",
+  "version": "1.0.1",
   "description": "Monaco Editor component for React.",
-  "private": true,
+  "homepage": "https://jaywcjlove.github.io/react-monacoeditor/",
   "scripts": {
+    "deploy": "npm run build && kkt deploy -u git@github.com:jaywcjlove/react-monacoeditor.git",
     "release": "babel --plugins transform-runtime src --out-dir lib --copy-files",
     "start": "kkt start",
     "build": "kkt build"
