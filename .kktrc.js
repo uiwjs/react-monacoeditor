@@ -30,6 +30,7 @@ module.exports = function (webpackConf, ServerConf) {
     }
     if (webpackConf.mode === 'production') {
       // 生产模式下更改的 webpack 配置
+      webpackConf.output.publicPath = '';
     }
     return webpackConf;
   }
