@@ -8,6 +8,10 @@
     "start": "kkt start",
     "build": "kkt build"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaywcjlove/react-monacoeditor.git"
+  },
   "keywords": [
     "react-monacoeditor",
     "monacoeditor",

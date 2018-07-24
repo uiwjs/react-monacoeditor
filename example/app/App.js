@@ -27,11 +27,11 @@ class App extends PureComponent {
       mode: 'javascript',
       hyperlink: [
         {
-          href: 'https://github.com/uiw-react/react-codemirror',
+          href: 'https://github.com/jaywcjlove/react-monacoeditor',
           label: 'View on GitHub',
         },
         {
-          href: 'https://www.npmjs.com/package/@uiw/react-codemirror',
+          href: 'https://www.npmjs.com/package/react-monacoeditor',
           label: 'View on NPM',
         },
         {
