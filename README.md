@@ -1,7 +1,7 @@
 react-monacoeditor
 ===
 
-[Monaco Editor](https://github.com/Microsoft/monaco-editor) component for React.
+[Monaco Editor](https://github.com/Microsoft/monaco-editor) component for React. 
 
 <a href="https://jaywcjlove.github.io/react-monacoeditor/"><img src="https://raw.githubusercontent.com/jaywcjlove/react-monacoeditor/master/react-monacoeditor.png" /></a>
 
@@ -19,7 +19,7 @@ import MonacoEditor from 'react-monacoeditor';
 
 <MonacoEditor
   language="html"
-  value="<h1>I ♥ react-codemirror2</h1>"
+  value="<h1>I ♥ react-monacoeditor</h1>"
   options={{
     theme: 'vs-dark',
   }}
@@ -145,6 +145,10 @@ Otherwise, it behaves in uncontrolled mode.
 ## Events & Methods
 
 Refer to [Monaco interface IEditor](https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.ieditor.html).
+
+## Other
+
+- [react-codemirror](https://uiw-react.github.io/react-codemirror/) CodeMirror component for React.
 
 ## License
 
