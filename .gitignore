@@ -1,0 +1,15 @@
+node_modules
+dist
+lib
+!src/lib
+npm-debug.log*
+.DS_Store
+.cache
+.rdoc-dist
+
+*.bak
+*.tem
+*.temp
+#.swp
+*.*~
+~*.*
