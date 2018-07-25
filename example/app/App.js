@@ -69,7 +69,7 @@ class App extends PureComponent {
     return import(`code-example/lib/${lang}.js`);
   }
   render() {
-    const { hyperlink } = this.state;
+    const { hyperlink, code } = this.state;
     const version = VERSION; // eslint-disable-line
     const options = {
       selectOnLineNumbers: true,
@@ -78,6 +78,11 @@ class App extends PureComponent {
       automaticLayout: false,
       theme: 'vs-dark',
     };
+    let DocumentStrSource = DocumentStr;
+    // if (DocumentStrSource) DocumentStrSource = DocumentStr.replace(/(.*)<!--dividing-->/, '');
+    if (DocumentStrSource) DocumentStrSource = DocumentStr.replace(/([\s\S]*)<!--dividing-->/, '');
+    // DocumentStrSource = JSON.parse(DocumentStrSource);
+    console.log('DocumentStrSource:', JSON.stringify(DocumentStrSource));
     return (
       <div className={styles.App}>
         <header className={styles.AppHeader}>
@@ -97,7 +102,7 @@ class App extends PureComponent {
             ref={editor => this.editor = editor}
             height="500px"
             language={this.state.mode}
-            value={this.state.code}
+            value={code}
             editorDidMount={this.editorDidMount.bind(this)}
             onChange={this.onChange.bind(this)}
             options={options}
@@ -125,7 +130,7 @@ class App extends PureComponent {
         <div className={styles.options}>
           <Select value={this.state.mode} options={languageData} onChange={this.onSelectChange.bind(this)} />
         </div>
-        <Markdown source={DocumentStr} className={styles.markdown} />
+        <Markdown source={DocumentStrSource} className={styles.markdown} />
       </div>
     );
   }

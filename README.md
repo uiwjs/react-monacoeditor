@@ -5,6 +5,8 @@ react-monacoeditor
 
 <a href="https://jaywcjlove.github.io/react-monacoeditor/"><img src="https://raw.githubusercontent.com/jaywcjlove/react-monacoeditor/master/react-monacoeditor.png" /></a>
 
+<!--dividing-->
+
 ## Installation
 
 ```bash
