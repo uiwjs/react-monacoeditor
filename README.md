@@ -10,7 +10,7 @@ react-monacoeditor
 ## Installation
 
 ```bash
-npm install react-monacoeditor --save
+npm install @uiw/react-monacoeditor --save
 ```
 
 ## Using
