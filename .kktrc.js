@@ -18,7 +18,7 @@ module.exports = function (webpackConf, ServerConf) {
     }));
     webpackConf.resolve = webpackConf.resolve || {};
     webpackConf.resolve.extensions = ['.js', '.json'];
-    webpackConf.resolve.alias = { 'react-monacoeditor': MonacoEditorSrc };
+    webpackConf.resolve.alias = { '@uiw/react-monacoeditor': MonacoEditorSrc };
     // 更入口文件位置
     webpackConf.entry = webpackConf.entry.map((item) => {
       item = item.replace(/\/react-monacoeditor\/src\//, '/react-monacoeditor/example/');

@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import MonacoEditor from 'react-monacoeditor';
+import MonacoEditor from '@uiw/react-monacoeditor';
 import styles from './InlineCode.less';
 
 export default class Canvas extends PureComponent {

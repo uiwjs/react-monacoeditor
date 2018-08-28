@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 // eslint-disable-next-line import/no-unresolved, import/extensions
-import MonacoEditor from 'react-monacoeditor';
+import MonacoEditor from '@uiw/react-monacoeditor';
 import Markdown from './Markdown';
 import Select from './Select';
 import logo from './logo.svg';
@@ -46,8 +46,8 @@ class App extends PureComponent {
       this.setState({ mode: this.state.mode, code: code.default || '' });
     });
   }
-  editorDidMount(editor, monaco) {
-    console.log('editorDidMount', editor, monaco); // eslint-disable-line
+  editorDidMount(editor) {
+    // console.log('editorDidMount', editor, monaco); // eslint-disable-line
     editor.focus();
   }
   onChange() {
@@ -61,7 +61,7 @@ class App extends PureComponent {
       return;
     }
     this.dynamicLoadable(lang).then((code) => {
-      console.log('code.default:', code.default);
+      // console.log('code.default:', code.default);
       this.setState({ mode: lang, code: code.default || '' });
     });
   }
@@ -79,10 +79,7 @@ class App extends PureComponent {
       theme: 'vs-dark',
     };
     let DocumentStrSource = DocumentStr;
-    // if (DocumentStrSource) DocumentStrSource = DocumentStr.replace(/(.*)<!--dividing-->/, '');
     if (DocumentStrSource) DocumentStrSource = DocumentStr.replace(/([\s\S]*)<!--dividing-->/, '');
-    // DocumentStrSource = JSON.parse(DocumentStrSource);
-    console.log('DocumentStrSource:', JSON.stringify(DocumentStrSource));
     return (
       <div className={styles.App}>
         <header className={styles.AppHeader}>
