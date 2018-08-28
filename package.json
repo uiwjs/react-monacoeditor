@@ -1,8 +1,9 @@
 {
   "name": "@uiw/react-monacoeditor",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Monaco Editor component for React.",
   "homepage": "https://jaywcjlove.github.io/react-monacoeditor/",
+  "main": "lib/index.js",
   "scripts": {
     "deploy": "npm run build && kkt deploy -u git@github.com:jaywcjlove/react-monacoeditor.git",
     "release": "babel --plugins transform-runtime src --out-dir lib --copy-files",
@@ -33,7 +34,7 @@
   "devDependencies": {
     "classnames": "^2.2.6",
     "code-example": "^1.0.5",
-    "kkt": "1.9.x",
+    "kkt": "^1.9.29",
     "monaco-editor-webpack-plugin": "^1.4.0",
     "react-markdown": "^3.3.4"
   }
