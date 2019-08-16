@@ -17,7 +17,7 @@ npm install @uiw/react-monacoeditor --save
 
 ```js
 import React from 'react';
-import MonacoEditor from 'react-monacoeditor';
+import MonacoEditor from '@uiw/react-monacoeditor';
 
 <MonacoEditor
   language="html"
@@ -33,10 +33,10 @@ import MonacoEditor from 'react-monacoeditor';
 ```javascript
 import React from 'react';
 import { render } from 'react-dom';
-import MonacoEditor from 'react-monacoeditor';
+import MonacoEditor from '@uiw/react-monacoeditor';
 
 const code = `import React, { PureComponent } from 'react';
-import MonacoEditor from 'react-monacoeditor';
+import MonacoEditor from '@uiw/react-monacoeditor';
 
 export default class App extends PureComponent {
   render() {
