@@ -6,7 +6,7 @@
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "scripts": {
-    "deploy": "npm run build && kkt deploy -u git@github.com:jaywcjlove/react-monacoeditor.git",
+    "deploy": "gh-pages -d dist",
     "build": "npm run build:ts && npm run doc",
     "doc:dev": "kkt start",
     "doc": "kkt build",
@@ -24,6 +24,10 @@
     "editor",
     "react",
     "vscode"
+  ],
+  "files": [
+    "lib",
+    "src"
   ],
   "author": "kenny wong <wowohoo@qq.com>",
   "license": "MIT",
