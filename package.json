@@ -6,7 +6,7 @@
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "scripts": {
-    "deploy": "gh-pages -d dist",
+    "deploy": "npm run build && gh-pages -d dist",
     "build": "npm run build:ts && npm run doc",
     "doc:dev": "kkt start",
     "doc": "kkt build",
