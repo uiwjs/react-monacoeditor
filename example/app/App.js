@@ -4,7 +4,7 @@ import MonacoEditor from '@uiw/react-monacoeditor';
 import Markdown from './Markdown';
 import Select from './Select';
 import logo from './logo.svg';
-import styles from './App.less';
+import styles from './App.module.less';
 import DocumentStr from '../../README.md';
 
 const languageData = [
