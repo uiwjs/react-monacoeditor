@@ -2,8 +2,6 @@ import path from 'path';
 import webpack from 'webpack';
 import MonacoWebpackPlugin from 'monaco-editor-webpack-plugin';
 
-const MonacoEditorSrc = path.join(process.cwd(), 'src');
-
 export const moduleScopePluginOpts = [
   path.resolve(process.cwd(), 'README.md'),
   path.resolve(process.cwd(), 'src'),
