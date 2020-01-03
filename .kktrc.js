@@ -39,7 +39,6 @@ export default (conf) => {
   );
   conf.output = {
     ...conf.output,
-    path: path.join(process.cwd(), 'dist'),
     publicPath: './',
   };
   return conf;
