@@ -54,7 +54,7 @@
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-markdown": "4.3.0",
-    "tsbb": "1.4.0"
+    "tsbb": "1.6.2"
   },
   "browserslist": {
     "production": [
