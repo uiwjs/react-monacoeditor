@@ -48,7 +48,7 @@
     "@kkt/loader-less": "5.6.1",
     "classnames": "2.2.6",
     "code-example": "2.0.0",
-    "kkt": "5.3.0",
+    "kkt": "5.6.1",
     "monaco-editor-webpack-plugin": "1.9.0",
     "raw-loader": "4.0.0",
     "react": "16.13.1",
