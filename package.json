@@ -5,6 +5,7 @@
   "homepage": "https://jaywcjlove.github.io/react-monacoeditor/",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
+  "typings": "typings/index.d.ts",
   "scripts": {
     "deploy": "npm run build && gh-pages -d build",
     "build": "npm run build:ts && npm run doc",
