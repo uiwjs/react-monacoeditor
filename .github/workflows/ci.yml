@@ -1,0 +1,17 @@
+name: Build monacoeditor
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-uiw:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+
+    - run: npm install
