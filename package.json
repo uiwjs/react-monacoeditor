@@ -30,6 +30,7 @@
   ],
   "files": [
     "lib",
+    "typings",
     "src"
   ],
   "author": "kenny wong <wowohoo@qq.com>",
