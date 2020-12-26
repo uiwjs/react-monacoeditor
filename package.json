@@ -48,7 +48,7 @@
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
-    "@kkt/loader-less": "5.6.2",
+    "@kkt/loader-less": "5.11.1",
     "classnames": "2.2.6",
     "code-example": "2.0.0",
     "kkt": "5.6.2",
