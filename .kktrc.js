@@ -3,6 +3,7 @@ import webpack from 'webpack';
 import lessModules from '@kkt/less-modules';
 import rawModules from '@kkt/raw-modules';
 import scopePluginOptions from '@kkt/scope-plugin-options';
+import MonacoWebpackPlugin from 'monaco-editor-webpack-plugin';
 import pkg from './package.json';
 
 export default (conf, env, options) => {
