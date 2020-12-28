@@ -1,7 +1,7 @@
 react-monacoeditor
 ===
 
-![Build monacoeditor](https://github.com/jaywcjlove/react-monacoeditor/workflows/Build%20monacoeditor/badge.svg)
+[![Build](https://github.com/jaywcjlove/react-monacoeditor/workflows/Build/badge.svg)](https://github.com/jaywcjlove/react-monacoeditor/actions)
 
 [Monaco Editor](https://github.com/Microsoft/monaco-editor) component for React. demo @[jaywcjlove.github.io/react-monacoeditor/](https://jaywcjlove.github.io/react-monacoeditor/)  
 
