@@ -4,6 +4,7 @@ build
 lib
 !src/lib
 npm-debug.log*
+.eslintcache
 .DS_Store
 .cache
 .rdoc-dist
