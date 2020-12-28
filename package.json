@@ -10,8 +10,8 @@
     "prepare": "npm run build",
     "deploy": "npm run build && gh-pages -d build",
     "build": "npm run build:ts && npm run doc",
-    "doc": "kkt build --app-src ./website",
-    "start": "kkt start --app-src ./website",
+    "doc": "kkt build --app-src ./example",
+    "start": "kkt start --app-src ./example",
     "watch:ts": "tsbb watch --target react",
     "build:ts": "tsbb build --target react"
   },
