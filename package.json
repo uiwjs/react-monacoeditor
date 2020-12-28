@@ -10,8 +10,8 @@
     "prepare": "npm run build",
     "deploy": "npm run build && gh-pages -d build",
     "build": "npm run build:ts && npm run doc",
-    "doc:dev": "ENTRYDIR=example kkt start",
-    "doc": "ENTRYDIR=example kkt build",
+    "doc": "kkt build --app-src ./website",
+    "start": "kkt start --app-src ./website",
     "watch:ts": "tsbb watch --target react",
     "build:ts": "tsbb build --target react"
   },
@@ -36,7 +36,10 @@
   "author": "kenny wong <wowohoo@qq.com>",
   "license": "MIT",
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "peerDependencies": {
     "react": ">=16.8.0",
@@ -48,10 +51,12 @@
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
-    "@kkt/loader-less": "5.6.2",
+    "@kkt/less-modules": "6.0.11",
+    "@kkt/raw-modules": "6.0.11",
+    "@kkt/scope-plugin-options": "6.0.11",
     "classnames": "2.2.6",
     "code-example": "2.0.0",
-    "kkt": "5.6.2",
+    "kkt": "6.0.11",
     "monaco-editor-webpack-plugin": "1.9.0",
     "raw-loader": "4.0.1",
     "react": "16.13.1",
