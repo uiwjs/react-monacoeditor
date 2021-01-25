@@ -53,7 +53,7 @@
   "devDependencies": {
     "@kkt/less-modules": "6.0.11",
     "@kkt/raw-modules": "6.0.11",
-    "@kkt/scope-plugin-options": "6.0.11",
+    "@kkt/scope-plugin-options": "6.6.2",
     "classnames": "2.2.6",
     "code-example": "2.0.0",
     "kkt": "6.0.11",
