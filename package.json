@@ -56,7 +56,7 @@
     "@kkt/scope-plugin-options": "6.0.11",
     "classnames": "2.2.6",
     "code-example": "2.0.0",
-    "kkt": "6.0.11",
+    "kkt": "6.6.2",
     "monaco-editor-webpack-plugin": "1.9.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
