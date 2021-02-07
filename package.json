@@ -1,16 +1,16 @@
 {
   "name": "@uiw/react-monacoeditor",
-  "version": "2.2.2",
+  "version": "3.0.0",
   "description": "Monaco Editor component for React.",
   "homepage": "https://jaywcjlove.github.io/react-monacoeditor/",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
-  "typings": "typings/index.d.ts",
+  "typings": "lib/cjs/index.d.ts",
   "scripts": {
     "prepare": "npm run build:lib",
     "doc": "kkt build --app-src ./example",
     "start": "kkt start --app-src ./example",
-    "build": "npm run build:ts && npm run doc",
+    "build": "npm run build:lib && npm run doc",
     "build:lib": "npm run ts:build && npm run types:esm && npm run types:cjs",
     "watch": "npm run ts:watch & npm run types:watch",
     "types:build": "tsbb types --sourceRoot src --target ESNEXT",
@@ -35,7 +35,6 @@
   ],
   "files": [
     "lib",
-    "typings",
     "src"
   ],
   "author": "kenny wong <wowohoo@qq.com>",
