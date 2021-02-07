@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 // eslint-disable-next-line import/no-unresolved, import/extensions
 import MonacoEditor from '@uiw/react-monacoeditor';
-import Markdown from './Markdown';
+import Markdown from '@uiw/react-markdown-preview';
 import Select from './Select';
 import logo from './logo.svg';
 import styles from './App.module.less';
