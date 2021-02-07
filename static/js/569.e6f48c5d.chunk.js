@@ -1,2 +1,0 @@
-(this["webpackJsonp@uiw/react-monacoeditor"]=this["webpackJsonp@uiw/react-monacoeditor"]||[]).push([[569],{1230:function(e,t,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;t.default="=IF(A1:B2, TRUE, FALSE) / 100\n"}}]);
-//# sourceMappingURL=569.e6f48c5d.chunk.js.map

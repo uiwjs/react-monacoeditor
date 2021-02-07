@@ -1,2 +1,0 @@
-(this["webpackJsonp@uiw/react-monacoeditor"]=this["webpackJsonp@uiw/react-monacoeditor"]||[]).push([[514],{1175:function(e,o,n){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),o.default=void 0;o.default='<%\nfunction hello(who) {\n  return "Hello " + who;\n}\n%>\nThis is an example of EJS (embedded javascript)\n<p>The program says <%= hello("world") %>.</p>\n<script>\n  alert("And here is some normal JS code"); // also colored\n<\/script>\n\n'}}]);
-//# sourceMappingURL=514.99ab3df4.chunk.js.map
