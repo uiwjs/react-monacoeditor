@@ -25,6 +25,8 @@ export default (conf, env, options) => {
   conf.plugins.push(new webpack.DefinePlugin({
     VERSION: JSON.stringify(pkg.version),
   }));
-  conf.output = { ...conf.output, publicPath: './' }
+  if (env === 'production') {
+    conf.output = { ...conf.output, publicPath: './' };
+  }
   return conf;
 }
