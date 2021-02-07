@@ -127,7 +127,9 @@ class App extends PureComponent {
         <div className={styles.options}>
           <Select value={this.state.mode} options={languageData} onChange={this.onSelectChange.bind(this)} />
         </div>
+        <div>
         <Markdown source={DocumentStrSource} className={styles.markdown} />
+        </div>
       </div>
     );
   }
