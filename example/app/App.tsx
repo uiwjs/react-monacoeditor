@@ -1,4 +1,6 @@
 import React, { PureComponent } from 'react';
+import { editor } from 'monaco-editor';
+// @ts-ignore
 // eslint-disable-next-line import/no-unresolved, import/extensions
 import MonacoEditor from '@uiw/react-monacoeditor';
 import Markdown from '@uiw/react-markdown-preview';
@@ -7,7 +9,7 @@ import logo from './logo.svg';
 import styles from './App.module.less';
 import DocumentStr from '../../README.md';
 
-const languageData = [
+export const languageData = [
   'json', 'apl', 'brainfuck', 'clike', 'clojure', 'cmake', 'cobol', 'coffeescript', 'commonlisp', 'crystal', 'css',
   'cypher', 'cython', 'd', 'dart', 'diff', 'dockerfile', 'dtd', 'dylan', 'ecl', 'eiffel', 'elm', 'erlang', 'factor',
   'fcl', 'forth', 'fortran', 'gas', 'gherkin', 'go', 'groovy', 'haml', 'haskell', 'haskell-literate', 'haxe', 'htmlembedded',
@@ -19,8 +21,16 @@ const languageData = [
   'turtle', 'twig', 'typescript', 'vb', 'vbscript', 'velocity', 'verilog', 'vhdl', 'vue', 'webidl', 'xml', 'xquery', 'yacas', 'yaml',
 ];
 
-class App extends PureComponent {
-  constructor(props) {
+interface AppProps {}
+interface AppState {
+  code: string;
+  mode: string;
+  hyperlink: Record<'href' | 'label', string>[];
+}
+
+class App extends PureComponent<AppProps, AppState> {
+  editor?: editor.IStandaloneCodeEditor;
+  constructor(props: AppProps) {
     super(props);
     this.state = {
       code: '',
@@ -46,14 +56,14 @@ class App extends PureComponent {
       this.setState({ mode: this.state.mode, code: code.default || '' });
     });
   }
-  editorDidMount(editor) {
+  editorDidMount(editor: editor.IStandaloneCodeEditor) {
     // console.log('editorDidMount', editor, monaco); // eslint-disable-line
     editor.focus();
   }
   onChange() {
     // console.log('onChange', newValue, e);  // eslint-disable-line
   }
-  onSelectChange(e) {
+  onSelectChange(e: React.ChangeEvent<HTMLSelectElement>) {
     e.persist();
     const lang = e.target.value;
     if (languageData.indexOf(lang) === -1) {
@@ -65,11 +75,12 @@ class App extends PureComponent {
       this.setState({ mode: lang, code: code.default || '' });
     });
   }
-  dynamicLoadable(lang) {
+  dynamicLoadable(lang: string) {
     return import(`code-example/lib/${lang}.js`);
   }
-  render() {
+  render(): JSX.Element {
     const { hyperlink, code } = this.state;
+    // @ts-ignore
     const version = VERSION; // eslint-disable-line
     const options = {
       selectOnLineNumbers: true,
@@ -96,7 +107,7 @@ class App extends PureComponent {
         </header>
         <div className={styles.editor}>
           <MonacoEditor
-            ref={editor => this.editor = editor}
+            ref={(editor: editor.IStandaloneCodeEditor) => this.editor = editor}
             height="500px"
             language={this.state.mode}
             value={code}

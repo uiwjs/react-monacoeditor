@@ -7,12 +7,18 @@
   "module": "lib/esm/index.js",
   "typings": "typings/index.d.ts",
   "scripts": {
-    "prepare": "npm run build:ts",
-    "build": "npm run build:ts && npm run doc",
+    "prepare": "npm run build:lib",
     "doc": "kkt build --app-src ./example",
     "start": "kkt start --app-src ./example",
-    "watch:ts": "tsbb watch --target react",
-    "build:ts": "tsbb build --target react"
+    "build": "npm run build:ts && npm run doc",
+    "build:lib": "npm run ts:build && npm run types:esm && npm run types:cjs",
+    "watch": "npm run ts:watch & npm run types:watch",
+    "types:build": "tsbb types --sourceRoot src --target ESNEXT",
+    "types:watch": "npm run types:esm -- --watch & npm run types:cjs -- --watch",
+    "types:esm": "npm run types:build -- --outDir ../lib/esm",
+    "types:cjs": "npm run types:build -- --outDir ../lib/cjs",
+    "ts:watch": "tsbb watch --env-name esm:dev --env-name cjs --target react",
+    "ts:build": "tsbb build --target react"
   },
   "repository": {
     "type": "git",
@@ -46,10 +52,11 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.7.4",
-    "monaco-editor": "^0.22.3",
-    "prop-types": "^15.7.2"
+    "monaco-editor": "^0.22.3"
   },
   "devDependencies": {
+    "@types/react": "17.0.0",
+    "@types/react-dom": "17.0.0",
     "@kkt/less-modules": "6.6.2",
     "@kkt/raw-modules": "6.6.2",
     "@kkt/scope-plugin-options": "6.6.2",
@@ -58,8 +65,8 @@
     "code-example": "2.0.0",
     "kkt": "6.6.2",
     "monaco-editor-webpack-plugin": "3.0.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
     "tsbb": "2.0.7"
   },
   "browserslist": {
