@@ -8,7 +8,6 @@
   "typings": "typings/index.d.ts",
   "scripts": {
     "prepare": "npm run build:ts",
-    "deploy": "npm run build && gh-pages -d build",
     "build": "npm run build:ts && npm run doc",
     "doc": "kkt build --app-src ./example",
     "start": "kkt start --app-src ./example",
