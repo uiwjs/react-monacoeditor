@@ -3,6 +3,7 @@ react-monacoeditor
 
 ![Build & Deploy](https://github.com/jaywcjlove/react-monacoeditor/workflows/Build%20&%20Deploy/badge.svg)
 [![Open in unpkg](https://img.shields.io/badge/Open%20in-unpkg-blue)](https://uiwjs.github.io/npm-unpkg/#/pkg/@uiw/react-monacoeditor/file/README.md)
+[![npm version](https://img.shields.io/npm/v/@uiw/react-codemirror.svg)](https://www.npmjs.com/package/@uiw/react-monacoeditor)
 
 [Monaco Editor](https://github.com/Microsoft/monaco-editor) component for React. demo @[jaywcjlove.github.io/react-monacoeditor/](https://jaywcjlove.github.io/react-monacoeditor/)  
 
