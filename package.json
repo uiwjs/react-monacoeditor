@@ -57,7 +57,7 @@
     "@types/react": "17.0.0",
     "@types/react-dom": "17.0.0",
     "@kkt/less-modules": "6.6.2",
-    "@kkt/raw-modules": "6.6.2",
+    "@kkt/raw-modules": "6.6.3",
     "@kkt/scope-plugin-options": "6.6.2",
     "@uiw/react-markdown-preview": "2.1.1",
     "classnames": "2.2.6",
