@@ -1,2 +1,0 @@
-(this["webpackJsonp@uiw/react-monacoeditor"]=this["webpackJsonp@uiw/react-monacoeditor"]||[]).push([[497],{1160:function(n,t,e){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;t.default="/*\nsample useless code to demonstrate ecl syntax highlighting\nthis is a multiline comment!\n*/\n\n//  this is a singleline comment!\n\nimport ut;\nr := \n  record\n   string22 s1 := '123';\n   integer4 i1 := 123;\n  end;\n#option('tmp', true);\nd := dataset('tmp::qb', r, thor);\noutput(d);\n\n"}}]);
-//# sourceMappingURL=497.260e6418.chunk.js.map
