@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { editor } from 'monaco-editor';
+import Markdown from '@uiw/react-markdown-preview';
+import GitHubCorners from '@uiw/react-github-corners';
 // @ts-ignore
 // eslint-disable-next-line import/no-unresolved, import/extensions
 import MonacoEditor, { RefEditorInstance } from '../../';
-import Markdown from '@uiw/react-markdown-preview';
 import Select from './Select';
 import logo from './logo.svg';
 import styles from './App.module.less';
@@ -110,9 +111,16 @@ export default function Example() {
   }, []);
   return (
     <div className={styles.App}>
+      <GitHubCorners
+        fixed
+        size={52}
+        zIndex={9999}
+        target="__blank"
+        href="https://github.com/jaywcjlove/react-monacoeditor"
+      />
       <header className={styles.AppHeader}>
         <img src={logo} className={styles.AppLogo} alt="logo" />
-        <h1 className={styles.AppTitle}>React-MonacoEditor <sup>v{version}</sup></h1>
+        <h1 className={styles.AppTitle}>React Monaco Editor <sup>v{version}</sup></h1>
         <p className={styles.content}>MonacoEditor component for React. </p>
         <div className={styles.button}>
           {hyperlink.map((item, idx) => {
