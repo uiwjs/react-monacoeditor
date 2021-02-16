@@ -18,10 +18,7 @@
     "isolatedModules": true,
     "declaration": true,
     "baseUrl": ".",
-    "jsx": "react"
+    "jsx": "react-jsx"
   },
-  "include": ["../src"],
-  "typeRoots": [
-    "../node_modules/@types",
-  ]
+  "include": ["../src"]
 }
