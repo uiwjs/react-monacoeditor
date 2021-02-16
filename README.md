@@ -157,6 +157,7 @@ Refer to [Monaco interface IEditor](https://microsoft.github.io/monaco-editor/ap
 - [@uiw/react-codemirror](https://uiwjs.github.io/react-codemirror/): CodeMirror component for React.
 - [@uiw/react-markdown-editor](https://github.com/uiwjs/react-markdown-editor): A markdown editor with preview, implemented with React.js and TypeScript.
 - [@uiw/react-md-editor](https://github.com/uiwjs/react-md-editor): A simple markdown editor with preview, implemented with React.js and TypeScript.
+- [Nginx Editor](https://github.com/jaywcjlove/nginx-editor) Nginx language for Monaco Editor.
 
 ## License
 
