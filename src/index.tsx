@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { useImperativeHandle, useEffect, useRef, useState } from 'react';
 import * as monaco from 'monaco-editor';
+import { editor } from 'monaco-editor';
 
 function noop() {}
-
 
 export type IMonacoEditor = typeof monaco;
 export interface MonacoEditorProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange'>{
@@ -50,82 +50,69 @@ export interface MonacoEditorProps extends Omit<React.HTMLAttributes<HTMLDivElem
   onChange?: (value: string, event: monaco.editor.IModelContentChangedEvent) => void;
 }
 
-
-export default class MonacoEditor extends Component<MonacoEditorProps> {
-  public static defaultProps: MonacoEditorProps = {
-    width: '100%',
-    height: '100%',
-    defaultValue: '',
-    language: 'javascript',
-    options: {},
-    editorDidMount: noop,
-    onChange: noop,
-  };
-  containerElement?: HTMLDivElement;
-  _currentValue?: string;
+export interface RefEditorInstance {
+  container: HTMLDivElement | null;
   editor?: monaco.editor.IStandaloneCodeEditor;
-  constructor(props: MonacoEditorProps) {
-    super(props);
-    this.containerElement = undefined;
-    this._currentValue = props.value;
-  }
-  componentDidMount() {
-    this.initMonacoEditor();
-  }
-  componentDidUpdate(prevProps: MonacoEditorProps) {
-    if (this.props.value !== this._currentValue) {
-      this._currentValue = this.props.value;
-      if (this.editor) {
-        this.editor.setValue(this._currentValue || '');
-      }
-    }
-    if (this.editor && prevProps.language !== this.props.language) {
-      const model = this.editor.getModel();
-      if (model) {
-        monaco.editor.setModelLanguage(model, this.props.language || '');
-      }
-    }
-    if (prevProps.theme !== this.props.theme) {
-      monaco.editor.setTheme(this.props.theme || '');
-    }
-    if (
-      this.editor &&
-      (this.props.width !== prevProps.width || this.props.height !== prevProps.height)
-    ) {
-      this.editor.layout();
-    }
-  }
-  editorDidMount(editor: monaco.editor.IStandaloneCodeEditor) {
-    const { editorDidMount, onChange } = this.props;
-    editorDidMount!(editor, monaco);
-    editor.onDidChangeModelContent((event) => {
-      const value = editor.getValue();
-      // Always refer to the latest value
-      this._currentValue = value;
-      onChange!(value, event);
-    });
-  }
-  initMonacoEditor() {
-    const value = this.props.value !== null ? this.props.value : this.props.defaultValue;
-    const { language, theme, options } = this.props;
-    if (this.containerElement) {
-      this.editor = monaco.editor.create(this.containerElement, {
-        value,
+  monaco: IMonacoEditor;
+}
+
+function MonacoEditor(props: MonacoEditorProps, ref: ((instance: RefEditorInstance) => void) | React.RefObject<RefEditorInstance> | null | undefined) {
+  const { width = '100%', height = '100%', value = '', theme = '', language = 'javascript', options = {}, editorDidMount = noop, onChange = noop, defaultValue = '', ...other } = props;
+  options.language = language || options.language;
+  options.theme = theme || options.theme;
+  const [val, setVal] = useState(defaultValue);
+  const container = useRef<HTMLDivElement>(null);
+  const editor = useRef<monaco.editor.IStandaloneCodeEditor>();
+  useImperativeHandle(ref, () => ({ container: container.current, editor: editor.current, monaco }));
+  useEffect(() => {
+    if (container.current) {
+      editor.current = monaco.editor.create(container.current, {
+        value: val,
         language,
         ...options,
       });
-      if (theme) {
-        monaco.editor.setTheme(theme);
+      if (options.theme) {
+        monaco.editor.setTheme(options.theme);
       }
       // After initializing monaco editor
-      this.editorDidMount(this.editor);
+      editorDidMount!(editor.current, monaco);
+      editor.current.onDidChangeModelContent((event) => {
+        const valueCurrent = editor.current!.getValue();
+        // Always refer to the latest value
+        onChange!(valueCurrent, event);
+      });
     }
-  }
-  editorRef = (component: HTMLDivElement) => {
-    this.containerElement = component;
-  };
-  render() {
-    const { width, height, value, language, theme, options, editorDidMount, onChange, defaultValue, ...other } = this.props;
-    return <div {...other} ref={this.editorRef} style={{ ...other.style, width, height }} />;
-  }
+  }, []);
+
+  useEffect(() => {
+    if (value !== val && editor.current) {
+      setVal(value);
+      editor.current.setValue(value);
+    }
+  }, [value]);
+
+  useEffect(() => {
+    if (editor.current) {
+      const model = editor.current.getModel();
+      if (model) {
+        monaco.editor.setModelLanguage(model, props.language || '');
+      }
+    }
+  }, [language]);
+
+  useEffect(() => {
+    if (editor.current) {
+      const optionsRaw = editor.current.getRawOptions();
+      ;(Object.keys(optionsRaw) as (keyof editor.IEditorOptions)[]).forEach((keyname) => {
+        const propsOpt = options[keyname];
+        if (optionsRaw[keyname] !== propsOpt && propsOpt !== undefined) {
+          editor.current!.updateOptions({ [keyname]: propsOpt });
+        }
+      });
+    }
+  }, [options]);
+
+  return <div {...other} ref={container} style={{ ...other.style, width, height }} />;
 }
+
+export default React.forwardRef<RefEditorInstance, MonacoEditorProps>(MonacoEditor);
