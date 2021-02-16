@@ -1,2 +1,0 @@
-(this["webpackJsonp@uiw/react-monacoeditor"]=this["webpackJsonp@uiw/react-monacoeditor"]||[]).push([[566],{1232:function(e,o,a){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),o.default=void 0;o.default='author:Camus\n\ntitle:"The Rebel" and author:Camus\n\nphilosophy:Existentialism -author:Kierkegaard\n\nhardToSpell:Dostoevsky~\n\npublished:[194* TO 1960] and author:(Sartre or "Simone de Beauvoir")\n'}}]);
-//# sourceMappingURL=566.615401cd.chunk.js.map
