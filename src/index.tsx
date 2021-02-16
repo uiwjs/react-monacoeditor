@@ -126,6 +126,6 @@ export default class MonacoEditor extends Component<MonacoEditorProps> {
   };
   render() {
     const { width, height, value, language, theme, options, editorDidMount, onChange, defaultValue, ...other } = this.props;
-    return <div {...other} ref={this.editorRef} style={{ width, height }} />;
+    return <div {...other} ref={this.editorRef} style={{ ...other.style, width, height }} />;
   }
 }
