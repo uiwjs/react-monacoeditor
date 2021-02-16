@@ -11,15 +11,7 @@ import styles from './App.module.less';
 import DocumentStr from '../../README.md';
 
 export const languageData = [
-  'json', 'apl', 'brainfuck', 'clike', 'clojure', 'cmake', 'cobol', 'coffeescript', 'commonlisp', 'crystal', 'css',
-  'cypher', 'cython', 'd', 'dart', 'diff', 'dockerfile', 'dtd', 'dylan', 'ecl', 'eiffel', 'elm', 'erlang', 'factor',
-  'fcl', 'forth', 'fortran', 'gas', 'gherkin', 'go', 'groovy', 'haml', 'haskell', 'haskell-literate', 'haxe', 'htmlembedded',
-  'htmlmixed', 'http', 'idl', 'javascript', 'jinja2', 'jsx', 'less', 'julia', 'livescript', 'lua', 'mathematica', 'mbox', 'mirc',
-  'modelica', 'mscgen', 'mumps', 'nginx', 'nsis', 'ntriples', 'octave', 'oz', 'pascal', 'pegjs', 'perl', 'php', 'pig',
-  'powershell', 'properties', 'protobuf', 'pug', 'puppet', 'python', 'q', 'r', 'rpm', 'ruby', 'rust', 'sas', 'sass',
-  'scheme', 'shell', 'sieve', 'slim', 'smalltalk', 'smarty', 'solr', 'soy', 'sparql', 'spreadsheet', 'sql', 'stex',
-  'stylus', 'swift', 'tcl', 'textile', 'tiddlywiki', 'tiki', 'toml', 'tornado', 'troff', 'ttcn', 'ttcn-cfg',
-  'turtle', 'twig', 'typescript', 'vb', 'vbscript', 'velocity', 'verilog', 'vhdl', 'vue', 'webidl', 'xml', 'xquery', 'yacas', 'yaml',
+  'abap', 'aes', 'apex', 'azcli', 'bat', 'c', 'cameligo', 'clojure', 'coffeescript', 'cpp', 'csharp', 'csp', 'css', 'dart', 'dockerfile', 'fsharp', 'go', 'graphql', 'handlebars', 'hcl', 'html', 'ini', 'java', 'javascript', 'json', 'julia', 'kotlin', 'less', 'lex', 'lua', 'markdown', 'mips', 'msdax', 'mysql', 'objective', 'pascal', 'pascaligo', 'perl', 'pgsql', 'php', 'plaintext', 'postiats', 'powerquery', 'powershell', 'pug', 'python', 'r', 'razor', 'redis', 'redshift', 'restructuredtext', 'ruby', 'rust', 'sb', 'scala', 'scheme', 'scss', 'shell', 'sol', 'sql', 'st', 'swift', 'systemverilog', 'tcl', 'twig', 'typescript', 'vb', 'verilog', 'xml', 'yaml'
 ];
 
 const themesData = ['vs', 'vs-dark', 'hc-black']
@@ -99,7 +91,7 @@ export default function Example() {
     setTheme(e.target.value);
   }
   function dynamicLoadable(lang: string) {
-    return import(`code-example/lib/${lang}.js`);
+    return import(`code-example/txt/sample.${lang}.txt`);
   }
 
   useEffect(() => {

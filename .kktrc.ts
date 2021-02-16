@@ -9,7 +9,7 @@ import pkg from './package.json';
 
 export default (conf: Configuration, env: 'production' | 'development', options: LoaderConfOptions) => {
   conf = lessModules(conf, env, options);
-  conf = rawModules(conf, env, { ...options });
+  conf = rawModules(conf, env, { ...options, test: /\.(md|txt)$/i });
   conf = scopePluginOptions(conf, env, {
     ...options,
     allowedFiles: [

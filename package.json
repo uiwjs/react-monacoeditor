@@ -62,7 +62,7 @@
     "@uiw/react-markdown-preview": "2.1.1",
     "@uiw/react-github-corners": "1.2.0",
     "classnames": "2.2.6",
-    "code-example": "2.0.0",
+    "code-example": "3.0.1",
     "kkt": "6.6.3",
     "monaco-editor-webpack-plugin": "3.0.0",
     "react": "17.0.1",
