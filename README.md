@@ -147,7 +147,7 @@ Otherwise, it behaves in uncontrolled mode.
 - `options` refer to [Monaco interface IEditorConstructionOptions](https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.ieditorconstructionoptions.html).
 - `editorDidMount(editor, monaco)` an event emitted when the editor has been mounted (similar to `componentDidMount` of React).
 - `onChange(newValue, event)` an event emitted when the content of the current model has changed.
-- `autoComplete?: (model: monaco.editor.ITextModel, position: monaco.Position) => languages.CompletionItem[];` User provided extension function provider for auto-complete.
+- `autoComplete?: (model: monaco.editor.ITextModel, position: monaco.Position) => languages.CompletionItem[];` User provided extension function provider for auto-complete. [#47](https://github.com/jaywcjlove/react-monacoeditor/pull/47)
 
 ## Events & Methods
 
