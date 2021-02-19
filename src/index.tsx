@@ -1,6 +1,6 @@
 import React, { useImperativeHandle, useEffect, useRef, useState } from 'react';
 import * as monaco from 'monaco-editor';
-import { editor } from 'monaco-editor';
+import {editor, languages} from 'monaco-editor';
 
 function noop() {}
 
@@ -30,6 +30,10 @@ export interface MonacoEditorProps extends Omit<React.HTMLAttributes<HTMLDivElem
    */
   language?: monaco.editor.IStandaloneEditorConstructionOptions['language'];
   /**
+   * User provided extension function provider for auto-complete.
+   */
+  autoComplete?: (model: monaco.editor.ITextModel, position: monaco.Position) => languages.CompletionItem[];
+  /**
    * Initial theme to be used for rendering.
    * The current out-of-the-box available themes are: 'vs' (default), 'vs-dark', 'hc-black'.
    * You can create custom themes via `monaco.editor.defineTheme`.
@@ -57,7 +61,7 @@ export interface RefEditorInstance {
 }
 
 function MonacoEditor(props: MonacoEditorProps, ref: ((instance: RefEditorInstance) => void) | React.RefObject<RefEditorInstance> | null | undefined) {
-  const { width = '100%', height = '100%', value = '', theme = '', language = 'javascript', options = {}, editorDidMount = noop, onChange = noop, defaultValue = '', ...other } = props;
+  const { width = '100%', height = '100%', value = '', theme = '', language = 'javascript', autoComplete, options = {}, editorDidMount = noop, onChange = noop, defaultValue = '', ...other } = props;
   options.language = language || options.language;
   options.theme = theme || options.theme;
   const [val, setVal] = useState(defaultValue);
@@ -86,6 +90,18 @@ function MonacoEditor(props: MonacoEditorProps, ref: ((instance: RefEditorInstan
 
   useEffect(() => {
     if (value !== val && editor.current) {
+      if (autoComplete) {
+        if (editor?.current?.getModel() && editor?.current?.getPosition()) {
+          monaco.languages.registerCompletionItemProvider(language, {
+            provideCompletionItems: (model, position) => {
+              return {
+                suggestions: autoComplete(model, position)
+              };
+            }
+          });
+        }
+      }
+
       setVal(value);
       editor.current.setValue(value);
     }
