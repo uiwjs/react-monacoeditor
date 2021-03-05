@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.7.4",
-    "monaco-editor": "^0.22.3"
+    "monaco-editor": "^0.23.0"
   },
   "devDependencies": {
     "@types/react": "17.0.2",
