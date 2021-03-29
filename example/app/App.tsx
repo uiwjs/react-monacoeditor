@@ -20,7 +20,7 @@ export default function Example() {
   const [theme, setTheme] = useState('vs-dark');
   const [code, setCode] = useState('');
   const [mode, setMode] = useState('javascript');
-  const [hyperlink, setHyperlink] = useState<Record<'href' | 'label', string>[]>([
+  const [hyperlink] = useState<Record<'href' | 'label', string>[]>([
     {
       href: 'https://github.com/jaywcjlove/react-monacoeditor',
       label: 'View on GitHub',
@@ -100,6 +100,7 @@ export default function Example() {
       // setMode(mode);
       // this.setState({ mode: this.state.mode, code: code.default || '' });
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div className={styles.App}>
