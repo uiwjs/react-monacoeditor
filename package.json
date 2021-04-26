@@ -56,7 +56,7 @@
   "devDependencies": {
     "@types/react": "17.0.3",
     "@types/react-dom": "17.0.3",
-    "@kkt/less-modules": "6.8.2",
+    "@kkt/less-modules": "6.9.0",
     "@kkt/raw-modules": "6.8.2",
     "@kkt/scope-plugin-options": "6.8.2",
     "@uiw/react-markdown-preview": "2.1.1",
