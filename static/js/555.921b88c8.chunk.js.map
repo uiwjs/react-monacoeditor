@@ -1,1 +1,0 @@
-{"version":3,"sources":["../node_modules/code-example/txt/sample.csp.txt"],"names":[],"mappings":"6IAAA,OAAe","file":"static/js/555.921b88c8.chunk.js","sourcesContent":["export default \"Content-Security-Policy: default-src 'self'; img-src *; media-src media1.com media2.com; script-src userscripts.example.com\";"],"sourceRoot":""}

@@ -1,2 +1,0 @@
-(this["webpackJsonp@uiw/react-monacoeditor"]=this["webpackJsonp@uiw/react-monacoeditor"]||[]).push([[413],{835:function(t,a){Prism.languages["t4-vb"]=Prism.languages["t4-templating"].createT4("vbnet")}}]);
-//# sourceMappingURL=413.782955a4.chunk.js.map
