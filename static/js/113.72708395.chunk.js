@@ -1,0 +1,2 @@
+(this["webpackJsonp@uiw/react-monacoeditor"]=this["webpackJsonp@uiw/react-monacoeditor"]||[]).push([[113],{1079:function(e,n,E){"use strict";E.r(n),n.default="BEGIN\n    SELECT * INTO STRICT myrec FROM emp WHERE empname = myname;\n    EXCEPTION\n        WHEN NO_DATA_FOUND THEN\n            RAISE EXCEPTION 'employee % not found', myname;\n        WHEN TOO_MANY_ROWS THEN\n            RAISE EXCEPTION 'employee % not unique', myname;\nEND;"}}]);
+//# sourceMappingURL=113.72708395.chunk.js.map
