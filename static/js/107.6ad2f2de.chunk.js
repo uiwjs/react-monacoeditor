@@ -1,2 +1,0 @@
-(this["webpackJsonp@uiw/react-monacoeditor"]=this["webpackJsonp@uiw/react-monacoeditor"]||[]).push([[107],{1073:function(e,a,t){"use strict";t.r(a),a.default=" = CALCULATE(SUM(Sales[SalesAmount]), PREVIOUSQUARTER(Calendar[DateKey]))"}}]);
-//# sourceMappingURL=107.6ad2f2de.chunk.js.map

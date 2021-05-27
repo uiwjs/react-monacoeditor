@@ -1,2 +1,0 @@
-(this["webpackJsonp@uiw/react-monacoeditor"]=this["webpackJsonp@uiw/react-monacoeditor"]||[]).push([[96],{1062:function(r,e,t){"use strict";t.r(e),e.default='# Example of a .gitconfig file\r\n\r\n[core]\r\n\trepositoryformatversion = 0\r\n\tfilemode = false\r\n\tbare = false\r\n\tlogallrefupdates = true\r\n\tsymlinks = false\r\n\tignorecase = true\r\n\thideDotFiles = dotGitOnly\r\n\r\n# Defines the master branch\r\n[branch "master"]\r\n\tremote = origin\r\n\tmerge = refs/heads/master\r\n'}}]);
-//# sourceMappingURL=96.f7b5a884.chunk.js.map
