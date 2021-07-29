@@ -1,0 +1,2 @@
+(this["webpackJsonp@uiw/react-monacoeditor"]=this["webpackJsonp@uiw/react-monacoeditor"]||[]).push([[123],{1114:function(n,a,e){"use strict";e.r(a),a.default='import banana\r\n\r\n\r\nclass Monkey:\r\n    # Bananas the monkey can eat.\r\n    capacity = 10\r\n    def eat(self, n):\r\n        """Make the monkey eat n bananas!"""\r\n        self.capacity -= n * banana.size\r\n\r\n    def feeding_frenzy(self):\r\n        self.eat(9.25)\r\n        return "Yum yum"\r\n'}}]);
+//# sourceMappingURL=123.6d56c58d.chunk.js.map
