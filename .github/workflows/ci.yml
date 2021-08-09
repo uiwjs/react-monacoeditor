@@ -51,3 +51,7 @@ jobs:
           ${{ steps.changelog.outputs.changelog }}
         draft: false
         prerelease: false
+
+    - run: git status
+    - run: npm install @jsdevtools/npm-publish -g
+    - run: npm-publish --token="${{ secrets.NPM_TOKEN }}" ./package.json
