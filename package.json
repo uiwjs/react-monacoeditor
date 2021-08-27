@@ -3,22 +3,14 @@
   "version": "3.3.1",
   "description": "Monaco Editor component for React.",
   "homepage": "https://jaywcjlove.github.io/react-monacoeditor/",
-  "main": "lib/cjs/index.js",
-  "module": "lib/esm/index.js",
-  "typings": "lib/cjs/index.d.ts",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
   "scripts": {
-    "prepare": "npm run build:lib",
+    "prepare": "npm run build",
     "doc": "kkt build --app-src ./example",
     "start": "kkt start --app-src ./example",
-    "build": "npm run build:lib && npm run doc",
-    "build:lib": "npm run ts:build && npm run types:esm && npm run types:cjs",
-    "watch": "npm run ts:watch & npm run types:watch",
-    "types:build": "tsbb types --sourceRoot src --target ESNEXT",
-    "types:watch": "npm run types:esm -- --watch & npm run types:cjs -- --watch",
-    "types:esm": "npm run types:build -- --outDir ../lib/esm",
-    "types:cjs": "npm run types:build -- --outDir ../lib/cjs",
-    "ts:watch": "tsbb watch --env-name esm --env-name cjs --target react",
-    "ts:build": "tsbb build --target react"
+    "build": "tsbb build",
+    "watch": "tsbb watch"
   },
   "repository": {
     "type": "git",
@@ -35,6 +27,7 @@
   ],
   "files": [
     "lib",
+    "esm",
     "src"
   ],
   "author": "kenny wong <wowohoo@qq.com>",
@@ -50,7 +43,7 @@
     "react-dom": ">=16.8.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.13.10",
+    "@babel/runtime": "^7.15.3",
     "monaco-editor": "^0.27.0"
   },
   "devDependencies": {
@@ -63,10 +56,10 @@
     "@uiw/react-github-corners": "1.4.0",
     "code-example": "3.0.6",
     "kkt": "6.11.0",
-    "monaco-editor-webpack-plugin": "4.1.1",
+    "monaco-editor-webpack-plugin": "4.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "tsbb": "2.3.1"
+    "tsbb": "3.0.0-rc.13"
   },
   "browserslist": {
     "production": [
