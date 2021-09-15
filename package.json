@@ -54,7 +54,7 @@
     "@kkt/scope-plugin-options": "6.11.0",
     "@uiw/react-markdown-preview": "3.3.2",
     "@uiw/react-github-corners": "1.5.3",
-    "code-example": "3.0.6",
+    "code-example": "3.3.1",
     "kkt": "6.11.0",
     "monaco-editor-webpack-plugin": "4.1.2",
     "react": "17.0.2",
