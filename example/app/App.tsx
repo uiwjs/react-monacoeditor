@@ -26,7 +26,7 @@ export default function Example() {
       label: 'View on GitHub',
     },
     {
-      href: 'https://www.npmjs.com/package/react-monacoeditor',
+      href: 'https://www.npmjs.com/package/@uiw/react-monacoeditor',
       label: 'View on NPM',
     },
     {
