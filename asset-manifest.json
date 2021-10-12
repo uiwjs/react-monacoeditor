@@ -5,8 +5,8 @@
     "static/js/1.da28d219.chunk.js": "/react-monacoeditor/static/js/1.da28d219.chunk.js",
     "static/js/1.da28d219.chunk.js.map": "/react-monacoeditor/static/js/1.da28d219.chunk.js.map",
     "main.css": "/react-monacoeditor/static/css/main.f84561db.chunk.css",
-    "main.js": "/react-monacoeditor/static/js/main.5e759def.chunk.js",
-    "main.js.map": "/react-monacoeditor/static/js/main.5e759def.chunk.js.map",
+    "main.js": "/react-monacoeditor/static/js/main.087573fd.chunk.js",
+    "main.js.map": "/react-monacoeditor/static/js/main.087573fd.chunk.js.map",
     "runtime-main.js": "/react-monacoeditor/static/js/runtime-main.f9cd22c4.js",
     "runtime-main.js.map": "/react-monacoeditor/static/js/runtime-main.f9cd22c4.js.map",
     "static/css/4.ee9719a0.chunk.css": "/react-monacoeditor/static/css/4.ee9719a0.chunk.css",
@@ -354,6 +354,6 @@
     "static/css/4.ee9719a0.chunk.css",
     "static/js/4.10aa53be.chunk.js",
     "static/css/main.f84561db.chunk.css",
-    "static/js/main.5e759def.chunk.js"
+    "static/js/main.087573fd.chunk.js"
   ]
 }
