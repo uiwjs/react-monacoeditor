@@ -10,8 +10,8 @@
     "runtime-main.js": "/react-monacoeditor/static/js/runtime-main.1db85fe1.js",
     "runtime-main.js.map": "/react-monacoeditor/static/js/runtime-main.1db85fe1.js.map",
     "static/css/4.9eed16f9.chunk.css": "/react-monacoeditor/static/css/4.9eed16f9.chunk.css",
-    "static/js/4.52d01ab4.chunk.js": "/react-monacoeditor/static/js/4.52d01ab4.chunk.js",
-    "static/js/4.52d01ab4.chunk.js.map": "/react-monacoeditor/static/js/4.52d01ab4.chunk.js.map",
+    "static/js/4.fc6dd902.chunk.js": "/react-monacoeditor/static/js/4.fc6dd902.chunk.js",
+    "static/js/4.fc6dd902.chunk.js.map": "/react-monacoeditor/static/js/4.fc6dd902.chunk.js.map",
     "static/js/5.775d470c.chunk.js": "/react-monacoeditor/static/js/5.775d470c.chunk.js",
     "static/js/5.775d470c.chunk.js.map": "/react-monacoeditor/static/js/5.775d470c.chunk.js.map",
     "static/js/6.829b93fe.chunk.js": "/react-monacoeditor/static/js/6.829b93fe.chunk.js",
@@ -341,7 +341,7 @@
     "json.worker.js.map": "/react-monacoeditor/json.worker.js.map",
     "static/css/4.9eed16f9.chunk.css.map": "/react-monacoeditor/static/css/4.9eed16f9.chunk.css.map",
     "static/css/main.3edf2082.chunk.css.map": "/react-monacoeditor/static/css/main.3edf2082.chunk.css.map",
-    "static/js/4.52d01ab4.chunk.js.LICENSE.txt": "/react-monacoeditor/static/js/4.52d01ab4.chunk.js.LICENSE.txt",
+    "static/js/4.fc6dd902.chunk.js.LICENSE.txt": "/react-monacoeditor/static/js/4.fc6dd902.chunk.js.LICENSE.txt",
     "static/js/72.fcb3692a.chunk.js.LICENSE.txt": "/react-monacoeditor/static/js/72.fcb3692a.chunk.js.LICENSE.txt",
     "static/media/codicon.css": "/react-monacoeditor/static/media/codicon.59002d8c.ttf",
     "static/media/logo.103b5fa1.svg": "/react-monacoeditor/static/media/logo.103b5fa1.svg",
@@ -352,7 +352,7 @@
   "entrypoints": [
     "static/js/runtime-main.1db85fe1.js",
     "static/css/4.9eed16f9.chunk.css",
-    "static/js/4.52d01ab4.chunk.js",
+    "static/js/4.fc6dd902.chunk.js",
     "static/css/main.3edf2082.chunk.css",
     "static/js/main.e379f34d.chunk.js"
   ]
