@@ -28,7 +28,7 @@ jobs:
       with:
         package-path: ./package.json
 
-    - name: Generate Changelog
+    - name: 📝 Generate Changelog
       id: changelog
       uses: jaywcjlove/changelog-generator@v1.4.8
       with:
@@ -50,5 +50,8 @@ jobs:
           ${{ steps.changelog.outputs.changelog }}
 
     - run: git status
-    - run: npm install @jsdevtools/npm-publish -g
-    - run: npm-publish --token="${{ secrets.NPM_TOKEN }}" ./package.json
+    - name: 📦 @uiw/react-monacoeditor publish to NPM
+      uses: JS-DevTools/npm-publish@v1
+      with:
+        token: ${{ secrets.NPM_TOKEN }}
+        package: ./package.json
