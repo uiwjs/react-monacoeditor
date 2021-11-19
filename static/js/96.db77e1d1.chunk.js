@@ -1,2 +1,0 @@
-(this["webpackJsonp@uiw/react-monacoeditor"]=this["webpackJsonp@uiw/react-monacoeditor"]||[]).push([[96],{930:function(c,e,i){"use strict";i.r(e),e.default="Content-Security-Policy: default-src 'self'; img-src *; media-src media1.com media2.com; script-src userscripts.example.com"}}]);
-//# sourceMappingURL=96.db77e1d1.chunk.js.map
