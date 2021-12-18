@@ -30,7 +30,7 @@ export default function Example() {
       label: 'View on NPM',
     },
     {
-      href: 'https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.ieditoroptions.html#linenumbers',
+      href: 'https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IEditorOptions.html#linenumbers',
       label: 'Monaco Editor Options',
     },
   ]);
