@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useImperativeHandle, useEffect, useRef, useState } from 'react';
 import * as monaco from 'monaco-editor';
 import {editor, languages} from 'monaco-editor';

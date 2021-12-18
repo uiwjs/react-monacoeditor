@@ -154,7 +154,7 @@ Otherwise, it behaves in uncontrolled mode.
 
 ## Events & Methods
 
-Refer to [Monaco interface IEditor](https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.ieditor.html).
+Refer to [Monaco interface IEditor](https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IEditor.html).
 
 ### Related
 
