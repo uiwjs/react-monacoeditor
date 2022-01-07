@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunk_uiw_react_monacoeditor=self.webpackChunk_uiw_react_monacoeditor||[]).push([[4409],{4409:function(n,e,t){t.r(e),e.default='-- defines a factorial function\nfunction fact (n)\n  if n == 0 then\n    return 1\n  else\n    return n * fact(n-1)\n  end\nend\n\nprint("enter a number:")\na = io.read("*number")        -- read a number\nprint(fact(a))'}}]);
+//# sourceMappingURL=4409.eccf9a61.chunk.js.map
