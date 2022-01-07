@@ -125,7 +125,7 @@ render(
 );
 ```
 
-Add the [Monaco Webpack plugin](https://github.com/Microsoft/monaco-editor-webpack-plugin) `monaco-editor-webpack-plugin` to your `webpack.config.js`:
+Add the [Monaco Editor Webpack Loader Plugin](https://github.com/microsoft/monaco-editor/tree/main/webpack-plugin) `monaco-editor-webpack-plugin` to your `webpack.config.js`:
 
 ```js
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
