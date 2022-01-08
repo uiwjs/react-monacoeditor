@@ -52,7 +52,7 @@
     "@kkt/less-modules": "7.0.4",
     "@kkt/raw-modules": "7.0.4",
     "@kkt/scope-plugin-options": "7.0.4",
-    "@uiw/react-markdown-preview": "3.4.6",
+    "@uiw/react-markdown-preview": "3.4.7",
     "@uiw/react-github-corners": "1.5.3",
     "code-example": "3.3.1",
     "kkt": "7.0.4",
