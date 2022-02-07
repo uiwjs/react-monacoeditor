@@ -166,6 +166,12 @@ Refer to [Monaco interface IEditor](https://microsoft.github.io/monaco-editor/ap
 - [@uiw/react-markdown-preview](https://github.com/uiwjs/react-markdown-preview): React component preview markdown text in web browser. 
 - [Nginx Editor](https://github.com/jaywcjlove/nginx-editor) Nginx language for Monaco Editor.
 
+## Contributors
+
+<a href="https://github.com/jaywcjlove/react-monacoeditor/graphs/contributors">
+  <img src="https://jaywcjlove.github.io/react-monacoeditor/CONTRIBUTORS.svg" />
+</a>
+
 ## License
 
 Licensed under the MIT License.
