@@ -1,7 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useImperativeHandle, useEffect, useRef, useState } from 'react';
 import * as monaco from 'monaco-editor';
-import {editor, languages} from 'monaco-editor';
+import { editor, languages } from 'monaco-editor';
+// @ts-ignore
+import codicon from 'monaco-editor/min/vs/base/browser/ui/codicons/codicon/codicon.ttf';
 
 function noop() {}
 
@@ -55,6 +57,14 @@ export interface MonacoEditorProps extends Omit<React.HTMLAttributes<HTMLDivElem
   onChange?: (value: string, event: monaco.editor.IModelContentChangedEvent) => void;
 }
 
+export async function loadFont(fontFamily: string, url: string): Promise<void> {
+  const font = new FontFace(fontFamily, `local(${fontFamily}), url(${url})`);
+  // wait for font to be loaded
+  await font.load();
+  // add font to document
+  document.fonts.add(font);
+}
+
 export interface RefEditorInstance {
   container: HTMLDivElement | null;
   editor?: monaco.editor.IStandaloneCodeEditor;
@@ -87,6 +97,11 @@ function MonacoEditor(props: MonacoEditorProps, ref: ((instance: RefEditorInstan
         onChange!(valueCurrent, event);
       });
     }
+    loadFont('codicon', codicon).catch((e) => {
+      if (e) {
+        throw new Error('Failed to load font codicon!!');
+      }
+    });
   }, []);
 
   useEffect(() => {
