@@ -4,61 +4,61 @@ on:
     branches:
       - master
 jobs:
-  build-uiw:
+  build:
     runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-      with:
-        node-version: 14
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
 
-    - run: npm install
-    - run: npm run build
-    - run: npm run doc
+      - run: npm install
+      - run: npm run build
+      - run: npm run doc
 
-    - name: Generate Contributors Images
-      uses: jaywcjlove/github-action-contributors@main
-      with:
-        filter-author: (renovate\[bot\]|renovate-bot|dependabot\[bot\])
-        avatarSize: 42
-        output: build/CONTRIBUTORS.svg
+      - name: Generate Contributors Images
+        uses: jaywcjlove/github-action-contributors@main
+        with:
+          filter-author: (renovate\[bot\]|renovate-bot|dependabot\[bot\])
+          avatarSize: 42
+          output: build/CONTRIBUTORS.svg
 
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
 
-    - name: ♻️ Is a tag created auto?
-      id: create_tag
-      uses: jaywcjlove/create-tag-action@v1.3.5
-      with:
-        package-path: ./package.json
+      - name: ♻️ Is a tag created auto?
+        id: create_tag
+        uses: jaywcjlove/create-tag-action@v1.3.5
+        with:
+          package-path: ./package.json
 
-    - name: 📝 Generate Changelog
-      id: changelog
-      uses: jaywcjlove/changelog-generator@v1.4.8
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        head-ref: ${{steps.create_tag.outputs.version}}
-        filter-author: (小弟调调™|renovate-bot)
-        filter: '[R|r]elease[d]\s+[v|V]\d(\.\d+){0,2}'
+      - name: 📝 Generate Changelog
+        id: changelog
+        uses: jaywcjlove/changelog-generator@v1.4.8
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          head-ref: ${{steps.create_tag.outputs.version}}
+          filter-author: (小弟调调™|renovate-bot)
+          filter: '[R|r]elease[d]\s+[v|V]\d(\.\d+){0,2}'
 
-    - name: ♻️ Create Release
-      uses: jaywcjlove/create-tag-action@v1.3.4
-      with:
-        package-path: ./package.json
-        release: true
-        body: |
-          [![](https://img.shields.io/badge/Open%20in-unpkg-blue)](https://uiwjs.github.io/npm-unpkg/#/pkg/@uiw/react-monacoeditor@${{steps.create_tag.outputs.versionNumber}}/file/README.md)
+      - name: ♻️ Create Release
+        uses: jaywcjlove/create-tag-action@v1.3.4
+        with:
+          package-path: ./package.json
+          release: true
+          body: |
+            [![](https://img.shields.io/badge/Open%20in-unpkg-blue)](https://uiwjs.github.io/npm-unpkg/#/pkg/@uiw/react-monacoeditor@${{steps.create_tag.outputs.versionNumber}}/file/README.md)
 
-          ${{ steps.changelog.outputs.compareurl }}
+            ${{ steps.changelog.outputs.compareurl }}
 
-          ${{ steps.changelog.outputs.changelog }}
+            ${{ steps.changelog.outputs.changelog }}
 
-    - run: git status
-    - name: 📦 @uiw/react-monacoeditor publish to NPM
-      uses: JS-DevTools/npm-publish@v1
-      with:
-        token: ${{ secrets.NPM_TOKEN }}
-        package: ./package.json
+      - run: git status
+      - name: 📦 @uiw/react-monacoeditor publish to NPM
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: ./package.json
