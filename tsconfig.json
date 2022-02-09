@@ -15,9 +15,12 @@
     "declaration": true,
     "baseUrl": "example",
     "jsx": "react-jsx",
-    "typeRoots": ["node_modules/@types"],
     "noFallthroughCasesInSwitch": true,
     "noEmit": true
   },
-  "include": ["example", ".kktrc.ts"]
+  "include": [
+    "src",
+    "example",
+    ".kktrc.ts"
+  ]
 }
