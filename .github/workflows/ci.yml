@@ -31,7 +31,7 @@ jobs:
 
     - name: ♻️ Is a tag created auto?
       id: create_tag
-      uses: jaywcjlove/create-tag-action@v1.3.4
+      uses: jaywcjlove/create-tag-action@v1.3.5
       with:
         package-path: ./package.json
 
