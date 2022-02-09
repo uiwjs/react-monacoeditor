@@ -168,9 +168,13 @@ Refer to [Monaco interface IEditor](https://microsoft.github.io/monaco-editor/ap
 
 ## Contributors
 
-<a href="https://github.com/jaywcjlove/react-monacoeditor/graphs/contributors">
-  <img src="https://jaywcjlove.github.io/react-monacoeditor/CONTRIBUTORS.svg" />
+As always, thanks to our amazing contributors!
+
+<a href="https://github.com/jaywcjlove/github-action-contributors/graphs/contributors">
+  <img src="https://jaywcjlove.github.io/github-action-contributors/CONTRIBUTORS.svg" />
 </a>
+
+Made with [github-action-contributors](https://github.com/jaywcjlove/github-action-contributors).
 
 ## License
 
