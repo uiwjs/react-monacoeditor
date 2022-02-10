@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunk_uiw_react_monacoeditor=self.webpackChunk_uiw_react_monacoeditor||[]).push([[5281],{35281:function(n,r,e){e.r(r),r.default='(* Sample F# application *)\r\n[<EntryPoint>]\r\nlet main argv = \r\n    printfn "%A" argv\r\n    System.Console.WriteLine("Hello from F#")\r\n    0 // return an integer exit code\r\n\r\n//-------------------------------------------------------- \r\n'}}]);
-//# sourceMappingURL=5281.313e3adf.chunk.js.map

@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunk_uiw_react_monacoeditor=self.webpackChunk_uiw_react_monacoeditor||[]).push([[3931],{43931:function(e,r,n){n.r(r),r.default='# Example of a .gitconfig file\r\n\r\n[core]\r\n  repositoryformatversion = 0\r\n  filemode = false\r\n  bare = false\r\n  logallrefupdates = true\r\n  symlinks = false\r\n  ignorecase = true\r\n  hideDotFiles = dotGitOnly\r\n\r\n# Defines the master branch\r\n[branch "master"]\r\n  remote = origin\r\n  merge = refs/heads/master\r\n'}}]);
-//# sourceMappingURL=3931.c9ab6865.chunk.js.map

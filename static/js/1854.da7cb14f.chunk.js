@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunk_uiw_react_monacoeditor=self.webpackChunk_uiw_react_monacoeditor||[]).push([[1854],{21854:function(e,n,i){i.r(n),n.default='begin:\nTextWindow.Write("Enter a number: ")\nnum = TextWindow.ReadNumber()\nremainder = Math.Remainder(num, 2)\nIf (remainder = 0) Then\n TextWindow.WriteLine("The number is Even")\nElse\n TextWindow.WriteLine("The number is Odd")\nEndIf\nGoto begin'}}]);
-//# sourceMappingURL=1854.da7cb14f.chunk.js.map

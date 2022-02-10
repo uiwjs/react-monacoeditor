@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunk_uiw_react_monacoeditor=self.webpackChunk_uiw_react_monacoeditor||[]).push([[8898],{18898:function(e,c,i){i.r(c),c.default="Content-Security-Policy: default-src 'self'; img-src *; media-src media1.com media2.com; script-src userscripts.example.com"}}]);
-//# sourceMappingURL=8898.198a0d6c.chunk.js.map
