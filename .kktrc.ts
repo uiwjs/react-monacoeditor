@@ -28,6 +28,39 @@ export default (conf: Configuration, env: 'production' | 'development', options:
   }));
   if (env === 'production') {
     conf.output = { ...conf.output, publicPath: './' };
+    conf.optimization = {
+      ...conf.optimization,
+      splitChunks: {
+        automaticNameDelimiter: '.',
+        maxSize: 500000,
+        maxInitialRequests: 20,
+        minSize: 100000,
+        cacheGroups: {
+          reactvendor: {
+            test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+            name: 'react-vendor',
+            reuseExistingChunk: true,
+            chunks: 'all',
+            priority: -10,
+          },
+          monacoeditor: {
+            test: /[\\/]node_modules[\\/](monaco-editor)[\\/]/,
+            name: 'monaco-editor-vendor',
+            chunks: 'all',
+          },
+          codeexample: {
+            test: /[\\/]node_modules[\\/](code-example)[\\/]/,
+            name: 'code-example',
+            chunks: 'all',
+          },
+          refractor: {
+            test: /[\\/]node_modules[\\/](refractor)[\\/]/,
+            name: 'refractor-vendor',
+            chunks: 'all',
+          },
+        },
+      },
+    };
   }
   return conf;
 }
