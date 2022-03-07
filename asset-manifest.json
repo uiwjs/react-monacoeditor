@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-monacoeditor/static/css/main.08716ea0.css",
-    "main.js": "/react-monacoeditor/static/js/main.8b68df86.js",
+    "main.css": "/react-monacoeditor/static/css/main.3ad5f2a3.css",
+    "main.js": "/react-monacoeditor/static/js/main.ccd6334d.js",
     "monaco-editor-vendor.80c937b5.js": "/react-monacoeditor/static/js/monaco-editor-vendor.80c937b5.b7b45d49.js",
     "code-example.js": "/react-monacoeditor/static/js/code-example.f159f042.chunk.js",
     "refractor-vendor.69bdd742.js": "/react-monacoeditor/static/js/refractor-vendor.69bdd742.56e13a74.js",
@@ -47,8 +47,8 @@
     "static/media/codicon.ttf": "/react-monacoeditor/static/media/codicon.f1fd2824f6c602ce2f26.ttf",
     "index.html": "/react-monacoeditor/index.html",
     "static/media/logo.svg": "/react-monacoeditor/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
-    "main.08716ea0.css.map": "/react-monacoeditor/static/css/main.08716ea0.css.map",
-    "main.8b68df86.js.map": "/react-monacoeditor/static/js/main.8b68df86.js.map",
+    "main.3ad5f2a3.css.map": "/react-monacoeditor/static/css/main.3ad5f2a3.css.map",
+    "main.ccd6334d.js.map": "/react-monacoeditor/static/js/main.ccd6334d.js.map",
     "monaco-editor-vendor.80c937b5.b7b45d49.js.map": "/react-monacoeditor/static/js/monaco-editor-vendor.80c937b5.b7b45d49.js.map",
     "code-example.f159f042.chunk.js.map": "/react-monacoeditor/static/js/code-example.f159f042.chunk.js.map",
     "refractor-vendor.69bdd742.56e13a74.js.map": "/react-monacoeditor/static/js/refractor-vendor.69bdd742.56e13a74.js.map",
@@ -124,7 +124,7 @@
     "static/js/refractor-vendor.750e2801.365e8a55.js",
     "static/js/refractor-vendor.69bdd742.56e13a74.js",
     "static/js/react-vendor.5370f8e2.js",
-    "static/css/main.08716ea0.css",
-    "static/js/main.8b68df86.js"
+    "static/css/main.3ad5f2a3.css",
+    "static/js/main.ccd6334d.js"
   ]
 }
