@@ -1,6 +1,8 @@
 react-monacoeditor
 ===
 
+[![CI](https://github.com/jaywcjlove/react-monacoeditor/actions/workflows/ci.yml/badge.svg)](https://github.com/jaywcjlove/react-monacoeditor/actions/workflows/ci.yml)
+[![jsDelivr CDN](https://data.jsdelivr.com/v1/package/npm/@uiw/react-monacoeditor/badge?style=rounded)](https://www.jsdelivr.com/package/npm/@uiw/react-monacoeditor)
 [![Downloads](https://img.shields.io/npm/dm/@uiw/react-monacoeditor.svg?style=flat)](https://www.npmjs.com/package/@uiw/react-monacoeditor)
 [![Open in unpkg](https://img.shields.io/badge/Open%20in-unpkg-blue)](https://uiwjs.github.io/npm-unpkg/#/pkg/@uiw/react-monacoeditor/file/README.md)
 [![npm version](https://img.shields.io/npm/v/@uiw/react-codemirror.svg)](https://www.npmjs.com/package/@uiw/react-monacoeditor)
@@ -169,8 +171,8 @@ Refer to [Monaco interface IEditor](https://microsoft.github.io/monaco-editor/ap
 
 As always, thanks to our amazing contributors!
 
-<a href="https://github.com/jaywcjlove/github-action-contributors/graphs/contributors">
-  <img src="https://jaywcjlove.github.io/github-action-contributors/CONTRIBUTORS.svg" />
+<a href="https://github.com/jaywcjlove/react-monacoeditor/graphs/contributors">
+  <img src="https://jaywcjlove.github.io/react-monacoeditor/CONTRIBUTORS.svg" />
 </a>
 
 Made with [github-action-contributors](https://github.com/jaywcjlove/github-action-contributors).
