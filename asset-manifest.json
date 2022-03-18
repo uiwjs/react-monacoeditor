@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-monacoeditor/static/css/main.5d050b69.css",
-    "main.js": "/react-monacoeditor/static/js/main.5323ee67.js",
+    "main.js": "/react-monacoeditor/static/js/main.875a4bb2.js",
     "monaco-editor-vendor.80c937b5.js": "/react-monacoeditor/static/js/monaco-editor-vendor.80c937b5.c420a3ce.js",
     "code-example.js": "/react-monacoeditor/static/js/code-example.f159f042.chunk.js",
     "refractor-vendor.0abbb2f3.js": "/react-monacoeditor/static/js/refractor-vendor.0abbb2f3.a17b271b.js",
@@ -48,7 +48,7 @@
     "index.html": "/react-monacoeditor/index.html",
     "static/media/logo.svg": "/react-monacoeditor/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
     "main.5d050b69.css.map": "/react-monacoeditor/static/css/main.5d050b69.css.map",
-    "main.5323ee67.js.map": "/react-monacoeditor/static/js/main.5323ee67.js.map",
+    "main.875a4bb2.js.map": "/react-monacoeditor/static/js/main.875a4bb2.js.map",
     "monaco-editor-vendor.80c937b5.c420a3ce.js.map": "/react-monacoeditor/static/js/monaco-editor-vendor.80c937b5.c420a3ce.js.map",
     "code-example.f159f042.chunk.js.map": "/react-monacoeditor/static/js/code-example.f159f042.chunk.js.map",
     "refractor-vendor.0abbb2f3.a17b271b.js.map": "/react-monacoeditor/static/js/refractor-vendor.0abbb2f3.a17b271b.js.map",
@@ -125,6 +125,6 @@
     "static/js/refractor-vendor.0abbb2f3.a17b271b.js",
     "static/js/react-vendor.5370f8e2.js",
     "static/css/main.5d050b69.css",
-    "static/js/main.5323ee67.js"
+    "static/js/main.875a4bb2.js"
   ]
 }
