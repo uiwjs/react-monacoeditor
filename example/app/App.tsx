@@ -2,8 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { editor } from 'monaco-editor';
 import Markdown from '@uiw/react-markdown-preview';
 import GitHubCorners from '@uiw/react-github-corners';
-// @ts-ignore
-// eslint-disable-next-line import/no-unresolved, import/extensions
+import '@wcj/dark-mode';
 import MonacoEditor, { RefEditorInstance } from '../../';
 import Select from './Select';
 import logo from './logo.svg';
@@ -86,8 +85,11 @@ export default function Example() {
       setCode(code.default || '');
     });
   }
+  const themeRef = useRef<string>()
   function onSelectThemeChange(e: React.ChangeEvent<HTMLSelectElement>) {
     e.persist();
+    document.documentElement.setAttribute('data-color-mode', /^vs$/.test(e.target.value) ? 'light' : 'dark');
+    themeRef.current = e.target.value;
     setTheme(e.target.value);
   }
   function dynamicLoadable(lang: string) {
@@ -100,10 +102,14 @@ export default function Example() {
       // setMode(mode);
       // this.setState({ mode: this.state.mode, code: code.default || '' });
     });
+    document.addEventListener('colorschemechange', (e) => {
+      setTheme(e.detail.colorScheme === 'dark' ? (['vs-dark', 'hc-black'].includes(themeRef.current!) ? themeRef.current! : 'vs-dark') : 'vs');
+    });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div className={styles.App}>
+    <div className={`${styles.App} wmde-markdown-var`}>
+      <dark-mode permanent dark="Dark" light="Light" style={{ position: 'fixed', top: 8, left: 10, zIndex: 999 }}></dark-mode>
       <GitHubCorners
         fixed
         size={52}
