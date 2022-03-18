@@ -105,6 +105,12 @@ function MonacoEditor(props: MonacoEditorProps, ref: ((instance: RefEditorInstan
   }, []);
 
   useEffect(() => {
+    if (options.theme) {
+      monaco.editor.setTheme(options.theme);
+    }
+  }, [options.theme])
+
+  useEffect(() => {
     if (value !== val && editor.current) {
       if (autoComplete) {
         if (editor?.current?.getModel() && editor?.current?.getPosition()) {
