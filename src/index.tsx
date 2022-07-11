@@ -102,6 +102,12 @@ function MonacoEditor(props: MonacoEditorProps, ref: ((instance: RefEditorInstan
         throw new Error('Failed to load font codicon!!');
       }
     });
+
+    return () => {
+      if(editor.current) {
+        editor.current.dispose()
+      }
+    }
   }, []);
 
   useEffect(() => {
