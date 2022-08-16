@@ -117,23 +117,22 @@ function MonacoEditor(props: MonacoEditorProps, ref: ((instance: RefEditorInstan
   }, [options.theme])
 
   useEffect(() => {
-    if (value !== val && editor.current) {
-      if (autoComplete) {
-        if (editor?.current?.getModel() && editor?.current?.getPosition()) {
-          monaco.languages.registerCompletionItemProvider(language, {
-            provideCompletionItems: (model, position) => {
-              return {
-                suggestions: autoComplete(model, position)
-              };
-            }
-          });
-        }
+    if (editor.current && autoComplete) {
+      if (editor?.current?.getModel() && editor?.current?.getPosition()) {
+        const CPDisposable: monaco.IDisposable 
+          = monaco.languages.registerCompletionItemProvider(language, {
+              provideCompletionItems: (model, position) => {
+                return {
+                    suggestions: autoComplete(model, position)
+                };
+              }
+            });
       }
-
-      setVal(value);
-      editor.current.setValue(value);
     }
-  }, [value]);
+    return () => {
+        CPDisposable.dispose();
+    }
+  }, [language, autoComplete]);
 
   useEffect(() => {
     if (editor.current) {
@@ -147,7 +146,7 @@ function MonacoEditor(props: MonacoEditorProps, ref: ((instance: RefEditorInstan
   useEffect(() => {
     if (editor.current) {
       const optionsRaw = editor.current.getRawOptions();
-      ;(Object.keys(optionsRaw) as (keyof editor.IEditorOptions)[]).forEach((keyname) => {
+      (Object.keys(optionsRaw) as (keyof editor.IEditorOptions)[]).forEach((keyname) => {
         const propsOpt = options[keyname];
         if (optionsRaw[keyname] !== propsOpt && propsOpt !== undefined) {
           editor.current!.updateOptions({ [keyname]: propsOpt });
