@@ -117,10 +117,10 @@ function MonacoEditor(props: MonacoEditorProps, ref: ((instance: RefEditorInstan
   }, [options.theme])
 
   useEffect(() => {
+    let CPDisposable: monaco.IDisposable;
     if (editor.current && autoComplete) {
       if (editor?.current?.getModel() && editor?.current?.getPosition()) {
-        const CPDisposable: monaco.IDisposable 
-          = monaco.languages.registerCompletionItemProvider(language, {
+        CPDisposable = monaco.languages.registerCompletionItemProvider(language, {
               provideCompletionItems: (model, position) => {
                 return {
                     suggestions: autoComplete(model, position)
@@ -130,7 +130,7 @@ function MonacoEditor(props: MonacoEditorProps, ref: ((instance: RefEditorInstan
       }
     }
     return () => {
-        CPDisposable.dispose();
+      CPDisposable && CPDisposable.dispose();
     }
   }, [language, autoComplete]);
 
