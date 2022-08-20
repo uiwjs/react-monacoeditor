@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/react-monacoeditor/static/css/main.747538e4.css",
-    "main.js": "/react-monacoeditor/static/js/main.5e950cd0.js",
+    "main.js": "/react-monacoeditor/static/js/main.0dd260fb.js",
     "code-example.js": "/react-monacoeditor/static/js/code-example.1af40f58.chunk.js",
     "monaco-editor-vendor.80c937b5.js": "/react-monacoeditor/static/js/monaco-editor-vendor.80c937b5.f3f97a7c.js",
     "refractor-vendor.0abbb2f3.js": "/react-monacoeditor/static/js/refractor-vendor.0abbb2f3.f3e38a84.js",
-    "react-vendor.js": "/react-monacoeditor/static/js/react-vendor.5370f8e2.js",
+    "react-vendor.js": "/react-monacoeditor/static/js/react-vendor.6b007a24.js",
     "monaco-editor-vendor.4936adf9.js": "/react-monacoeditor/static/js/monaco-editor-vendor.4936adf9.5d82d794.js",
     "monaco-editor-vendor.a3a53265.js": "/react-monacoeditor/static/js/monaco-editor-vendor.a3a53265.23f3dc7b.js",
     "monaco-editor-vendor.9723f17f.css": "/react-monacoeditor/static/css/monaco-editor-vendor.9723f17f.93cbd9c5.css",
@@ -48,11 +48,11 @@
     "index.html": "/react-monacoeditor/index.html",
     "static/media/logo.svg": "/react-monacoeditor/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
     "main.747538e4.css.map": "/react-monacoeditor/static/css/main.747538e4.css.map",
-    "main.5e950cd0.js.map": "/react-monacoeditor/static/js/main.5e950cd0.js.map",
+    "main.0dd260fb.js.map": "/react-monacoeditor/static/js/main.0dd260fb.js.map",
     "code-example.1af40f58.chunk.js.map": "/react-monacoeditor/static/js/code-example.1af40f58.chunk.js.map",
     "monaco-editor-vendor.80c937b5.f3f97a7c.js.map": "/react-monacoeditor/static/js/monaco-editor-vendor.80c937b5.f3f97a7c.js.map",
     "refractor-vendor.0abbb2f3.f3e38a84.js.map": "/react-monacoeditor/static/js/refractor-vendor.0abbb2f3.f3e38a84.js.map",
-    "react-vendor.5370f8e2.js.map": "/react-monacoeditor/static/js/react-vendor.5370f8e2.js.map",
+    "react-vendor.6b007a24.js.map": "/react-monacoeditor/static/js/react-vendor.6b007a24.js.map",
     "monaco-editor-vendor.4936adf9.5d82d794.js.map": "/react-monacoeditor/static/js/monaco-editor-vendor.4936adf9.5d82d794.js.map",
     "monaco-editor-vendor.a3a53265.23f3dc7b.js.map": "/react-monacoeditor/static/js/monaco-editor-vendor.a3a53265.23f3dc7b.js.map",
     "monaco-editor-vendor.9723f17f.93cbd9c5.css.map": "/react-monacoeditor/static/css/monaco-editor-vendor.9723f17f.93cbd9c5.css.map",
@@ -123,8 +123,8 @@
     "static/js/refractor-vendor.3665b250.c8d254e6.js",
     "static/js/refractor-vendor.0ff0ca8f.ea89eafe.js",
     "static/js/refractor-vendor.0abbb2f3.f3e38a84.js",
-    "static/js/react-vendor.5370f8e2.js",
+    "static/js/react-vendor.6b007a24.js",
     "static/css/main.747538e4.css",
-    "static/js/main.5e950cd0.js"
+    "static/js/main.0dd260fb.js"
   ]
 }
