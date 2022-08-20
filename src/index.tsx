@@ -79,6 +79,12 @@ function MonacoEditor(props: MonacoEditorProps, ref: ((instance: RefEditorInstan
   const container = useRef<HTMLDivElement>(null);
   const editor = useRef<monaco.editor.IStandaloneCodeEditor>();
   useImperativeHandle(ref, () => ({ container: container.current, editor: editor.current, monaco }));
+  useEffect(() => setVal(value), [value])
+  useEffect(() => {
+    if (editor.current) {
+      editor.current.setValue(val);
+    }
+  }, [val])
   useEffect(() => {
     if (container.current) {
       editor.current = monaco.editor.create(container.current, {
