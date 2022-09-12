@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-monacoeditor/static/css/main.670fbbb0.css",
-    "main.js": "/react-monacoeditor/static/js/main.ac3fff5b.js",
+    "main.js": "/react-monacoeditor/static/js/main.e7a3382e.js",
     "code-example.js": "/react-monacoeditor/static/js/code-example.1af40f58.chunk.js",
     "monaco-editor-vendor.80c937b5.js": "/react-monacoeditor/static/js/monaco-editor-vendor.80c937b5.584823c3.js",
     "refractor-vendor.0abbb2f3.js": "/react-monacoeditor/static/js/refractor-vendor.0abbb2f3.62671141.js",
@@ -50,7 +50,7 @@
     "index.html": "/react-monacoeditor/index.html",
     "static/media/logo.svg": "/react-monacoeditor/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
     "main.670fbbb0.css.map": "/react-monacoeditor/static/css/main.670fbbb0.css.map",
-    "main.ac3fff5b.js.map": "/react-monacoeditor/static/js/main.ac3fff5b.js.map",
+    "main.e7a3382e.js.map": "/react-monacoeditor/static/js/main.e7a3382e.js.map",
     "code-example.1af40f58.chunk.js.map": "/react-monacoeditor/static/js/code-example.1af40f58.chunk.js.map",
     "monaco-editor-vendor.80c937b5.584823c3.js.map": "/react-monacoeditor/static/js/monaco-editor-vendor.80c937b5.584823c3.js.map",
     "refractor-vendor.0abbb2f3.62671141.js.map": "/react-monacoeditor/static/js/refractor-vendor.0abbb2f3.62671141.js.map",
@@ -131,6 +131,6 @@
     "static/js/refractor-vendor.0abbb2f3.62671141.js",
     "static/js/react-vendor.6b007a24.js",
     "static/css/main.670fbbb0.css",
-    "static/js/main.ac3fff5b.js"
+    "static/js/main.e7a3382e.js"
   ]
 }
