@@ -62,7 +62,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "source-map-explorer": "~2.5.2",
-    "tsbb": "^3.7.6"
+    "tsbb": "^4.0.0"
   },
   "browserslist": {
     "production": [
