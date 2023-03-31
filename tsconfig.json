@@ -19,8 +19,6 @@
     "noEmit": true
   },
   "include": [
-    "src",
-    "example",
-    ".kktrc.ts"
+    "src"
   ]
 }

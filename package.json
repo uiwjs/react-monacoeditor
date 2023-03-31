@@ -9,8 +9,8 @@
     "prepare": "npm run build",
     "doc": "kkt build --app-src ./example",
     "start": "kkt start --app-src ./example",
-    "build": "tsbb build src/*.tsx --use-babel",
-    "watch": "tsbb watch src/*.tsx --use-babel --bail",
+    "build": "tsbb build src/*.tsx --use-babel --bail",
+    "watch": "tsbb watch src/*.tsx --use-babel",
     "map": "source-map-explorer build/static/js/*.js --html build/website-result.html"
   },
   "repository": {
