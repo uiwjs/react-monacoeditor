@@ -9,8 +9,8 @@
     "prepare": "npm run build",
     "doc": "kkt build --app-src ./example",
     "start": "kkt start --app-src ./example",
-    "build": "tsbb build",
-    "watch": "tsbb watch",
+    "build": "tsbb build src/*.tsx --use-babel",
+    "watch": "tsbb watch src/*.tsx --use-babel --bail",
     "map": "source-map-explorer build/static/js/*.js --html build/website-result.html"
   },
   "repository": {
@@ -62,7 +62,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "source-map-explorer": "~2.5.2",
-    "tsbb": "^3.7.6"
+    "tsbb": "^4.1.0"
   },
   "browserslist": {
     "production": [
