@@ -22,13 +22,13 @@ jobs:
         with:
           filter-author: (renovate\[bot\]|renovate-bot|dependabot\[bot\])
           avatarSize: 42
-          output: build/CONTRIBUTORS.svg
+          output: www/build/CONTRIBUTORS.svg
 
       - name: ♻️ Is a tag created auto?
         id: create_tag
         uses: jaywcjlove/create-tag-action@main
         with:
-          package-path: ./package.json
+          package-path: ./core/package.json
 
       - name: get tag version
         id: tag_version
@@ -39,7 +39,7 @@ jobs:
         with:
           commit_message: ${{steps.tag_version.outputs.tag}} ${{ github.event.head_commit.message }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./www/build
 
       - name: 📝 Generate Changelog
         id: changelog
@@ -52,7 +52,7 @@ jobs:
       - name: ♻️ Create Release
         uses: jaywcjlove/create-tag-action@main
         with:
-          package-path: ./package.json
+          package-path: ./core/package.json
           release: true
           body: |
             [![](https://img.shields.io/badge/Open%20in-unpkg-blue)](https://uiwjs.github.io/npm-unpkg/#/pkg/@uiw/react-monacoeditor@${{steps.create_tag.outputs.versionNumber}}/file/README.md)
@@ -67,6 +67,7 @@ jobs:
       - run: npm publish --access public
         name: 📦 @uiw/react-monacoeditor  publish to NPM
         continue-on-error: true
+        working-directory: core
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
   
