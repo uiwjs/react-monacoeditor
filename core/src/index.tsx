@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useImperativeHandle, useEffect, useRef, useState } from 'react';
+import React, { useImperativeHandle, useEffect, useRef, useState, useCallback } from 'react';
 import * as monaco from 'monaco-editor';
 import { editor, languages } from 'monaco-editor';
 import type { Position, IDisposable } from 'monaco-editor';
@@ -77,9 +77,9 @@ function MonacoEditor(props: MonacoEditorProps, ref: React.ForwardedRef<RefEdito
   options.language = language || options.language;
   options.theme = theme || options.theme;
   const [val, setVal] = useState(defaultValue);
-  const container = useRef<HTMLDivElement>(null);
+  const container = useRef<HTMLDivElement>();
   const $editor = useRef<editor.IStandaloneCodeEditor>();
-  useImperativeHandle(ref, () => ({ container: container.current, editor: $editor.current, monaco }));
+  useImperativeHandle(ref, () => ({ container: container.current || null, editor: $editor.current, monaco }));
   useEffect(() => setVal(value), [value])
   useEffect(() => {
     if ($editor.current) {
@@ -87,29 +87,6 @@ function MonacoEditor(props: MonacoEditorProps, ref: React.ForwardedRef<RefEdito
     }
   }, [val])
   useEffect(() => {
-    if (container.current) {
-      $editor.current = editor.create(container.current, {
-        value: val,
-        language,
-        ...options,
-      });
-      if (options.theme) {
-        editor.setTheme(options.theme);
-      }
-      // After initializing monaco editor
-      editorDidMount!($editor.current, monaco);
-      $editor.current.onDidChangeModelContent((event) => {
-        const valueCurrent = $editor.current!.getValue();
-        // Always refer to the latest value
-        onChange!(valueCurrent, event);
-      });
-    }
-    loadFont('codicon', codicon).catch((e) => {
-      if (e) {
-        throw new Error('Failed to load font codicon!!');
-      }
-    });
-
     return () => {
       if($editor.current) {
         $editor.current.dispose()
@@ -162,7 +139,33 @@ function MonacoEditor(props: MonacoEditorProps, ref: React.ForwardedRef<RefEdito
     }
   }, [options]);
 
-  return <div {...other} ref={container} style={{ ...other.style, width, height }} />;
+  const refElement = useCallback((node: HTMLDivElement) => {
+    if (node !== null) {
+      container.current = node;
+      $editor.current = editor.create(node, {
+        value: val,
+        language,
+        ...options,
+      });
+      if (options.theme) {
+        editor.setTheme(options.theme);
+      }
+      // After initializing monaco editor
+      editorDidMount!($editor.current, monaco);
+      $editor.current.onDidChangeModelContent((event) => {
+        const valueCurrent = $editor.current!.getValue();
+        // Always refer to the latest value
+        onChange!(valueCurrent, event);
+      });
+      loadFont('codicon', codicon).catch((e) => {
+        if (e) {
+          throw new Error('Failed to load font codicon!!');
+        }
+      });
+    }
+  }, []);
+
+  return <div {...other} ref={refElement} style={{ ...other.style, width, height }} />;
 }
 
 export default React.forwardRef<RefEditorInstance, MonacoEditorProps>(MonacoEditor);
