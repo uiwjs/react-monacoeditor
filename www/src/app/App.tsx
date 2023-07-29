@@ -1,13 +1,58 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { editor } from 'monaco-editor';
-import Markdown from '@uiw/react-markdown-preview';
-import GitHubCorners from '@uiw/react-github-corners';
-import '@wcj/dark-mode';
-import MonacoEditor, { RefEditorInstance } from '../../';
+import MonacoEditor, { RefEditorInstance } from '@uiw/react-monacoeditor';
+import styled from 'styled-components';
 import Select from './Select';
-import logo from './logo.svg';
-import styles from './App.module.less';
-import DocumentStr from '../../README.md';
+
+const Wrapper = styled.div`
+  header {
+    background-color: var(--color-theme-bg);
+    padding: 0 20px 40px 20px;
+    position: relative;
+    z-index: 9;
+    text-align: center;
+    a {
+      color: #333;
+      outline: none;
+      min-width: 88px;
+      min-height: 30px;
+      margin: 6px 5px;
+      padding: 0 10px;
+      font-size: 14px;
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      user-select: none;
+      border-radius: 3px;
+      cursor: pointer;
+      color: var(--color-theme-text);
+      background-color: var(--color-neutral-muted);
+      line-height: 30px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background-color .25s linear,color .05s linear,opacity .25s linear,filter .25s linear,visibility .25s linear,transform .25s linear;
+      &:hover {
+        background-color: var(--color-fg-default);
+        color: var(--color-canvas-default);
+      }
+    }
+  }
+`;
+
+const Editor = styled.div`
+  min-height: 500px;
+  max-width: 995px;
+  margin: 0 auto 0 auto;
+  position: relative;
+  z-index: 999;
+  .monaco-editor, .monaco-editor .overflow-guard {
+    border-radius: 5px;
+  }
+`;
+
+const Options = styled.div`
+  margin: 10px auto 0 auto;
+`;
 
 export const languageData = [
   'abap', 'aes', 'apex', 'azcli', 'bat', 'c', 'cameligo', 'clojure', 'coffeescript', 'cpp', 'csharp', 'csp', 'css', 'dart', 'dockerfile', 'fsharp', 'go', 'graphql', 'handlebars', 'hcl', 'html', 'ini', 'java', 'javascript', 'json', 'julia', 'kotlin', 'less', 'lex', 'lua', 'markdown', 'mips', 'msdax', 'mysql', 'objective', 'pascal', 'pascaligo', 'perl', 'pgsql', 'php', 'plaintext', 'postiats', 'powerquery', 'powershell', 'pug', 'python', 'r', 'razor', 'redis', 'redshift', 'restructuredtext', 'ruby', 'rust', 'sb', 'scala', 'scheme', 'scss', 'shell', 'sol', 'sql', 'st', 'swift', 'systemverilog', 'tcl', 'twig', 'typescript', 'vb', 'verilog', 'xml', 'yaml'
@@ -34,8 +79,6 @@ export default function Example() {
     },
   ]);
   const editorRef = useRef<RefEditorInstance>(null);
-  // @ts-ignore
-  const version = VERSION; // eslint-disable-line
   const options: editor.IStandaloneEditorConstructionOptions & editor.IEditorScrollbarOptions = {
     selectOnLineNumbers: true,
     roundedSelection: false,
@@ -60,8 +103,8 @@ export default function Example() {
     // horizontalScrollbarSize: 17,
     // arrowSize: 30,
   };
-  let DocumentStrSource = DocumentStr;
-  if (DocumentStrSource) DocumentStrSource = DocumentStr.replace(/([\s\S]*)<!--dividing-->/, '');
+  // let DocumentStrSource = DocumentStr;
+  // if (DocumentStrSource) DocumentStrSource = DocumentStr.replace(/([\s\S]*)<!--dividing-->/, '');
 
   function editorDidMount(editor: editor.IStandaloneCodeEditor) {
     // console.log('editorDidMount', editor, monaco); // eslint-disable-line
@@ -108,28 +151,15 @@ export default function Example() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div className={`${styles.App} wmde-markdown-var`}>
-      <dark-mode permanent dark="Dark" light="Light" style={{ position: 'fixed', top: 8, left: 10, zIndex: 999 }}></dark-mode>
-      <GitHubCorners
-        fixed
-        size={52}
-        zIndex={9999}
-        target="__blank"
-        href="https://github.com/jaywcjlove/react-monacoeditor"
-      />
-      <header className={styles.AppHeader}>
-        <img src={logo} className={styles.AppLogo} alt="logo" />
-        <h1 className={styles.AppTitle}>React Monaco Editor <sup>v{version}</sup></h1>
-        <p className={styles.content}>MonacoEditor component for React. </p>
-        <div className={styles.button}>
-          {hyperlink.map((item, idx) => {
-            return (
-              <a key={idx} target="_blank" rel="noopener noreferrer" href={item.href}>{item.label}</a>
-            );
-          })}
-        </div>
+    <Wrapper className="wmde-markdown-var">
+      <header>
+        {hyperlink.map((item, idx) => {
+          return (
+            <a key={idx} target="_blank" rel="noopener noreferrer" href={item.href}>{item.label}</a>
+          );
+        })}
       </header>
-      <div className={styles.editor}>
+      <Editor>
         <MonacoEditor
           ref={editorRef}
           height="500px"
@@ -139,14 +169,11 @@ export default function Example() {
           onChange={onChange}
           options={options}
         />
-      </div>
-      <div className={styles.options}>
+      </Editor>
+      <Options>
         <Select value={mode} options={languageData} onChange={onSelectChange} />
         <Select value={theme} options={themesData} onChange={onSelectThemeChange} />
-      </div>
-      <div>
-      <Markdown source={DocumentStrSource} className={styles.markdown} />
-      </div>
-    </div>
+      </Options>
+    </Wrapper>
   )
 }

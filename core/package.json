@@ -1,0 +1,36 @@
+{
+  "name": "@uiw/react-monacoeditor",
+  "version": "3.5.8",
+  "description": "Monaco Editor component for React.",
+  "homepage": "https://jaywcjlove.github.io/react-monacoeditor/",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaywcjlove/react-monacoeditor.git"
+  },
+  "keywords": [
+    "react-monacoeditor",
+    "monacoeditor",
+    "monaco-editor",
+    "monaco",
+    "editor",
+    "react",
+    "vscode"
+  ],
+  "files": [
+    "lib",
+    "esm",
+    "src"
+  ],
+  "author": "kenny wong <wowohoo@qq.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.16.7",
+    "monaco-editor": "^0.39.0"
+  }
+}

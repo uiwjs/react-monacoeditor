@@ -1,6 +1,16 @@
 import React from 'react';
-import styles from './index.module.less';
+import styled from 'styled-components';
 import { languageData } from '../App';
+
+const SelectWrapper = styled.select`
+  outline: none;
+  height: 26px;
+  line-height: 26px;
+  padding-left: 15px;
+  & + & {
+    margin-left: 10px;
+  }
+`;
 
 export type SelectProps = {
   options: typeof languageData;
@@ -10,7 +20,7 @@ export type SelectProps = {
 
 const Select = ({ value, options, onChange }: SelectProps) => {
   return (
-    <select className={styles.select} value={value} onChange={onChange}>
+    <SelectWrapper value={value} onChange={onChange}>
       {options.map((item, key) => {
         const optionProps: React.OptionHTMLAttributes<HTMLOptionElement> = { };
         if (value === item) {
@@ -20,7 +30,7 @@ const Select = ({ value, options, onChange }: SelectProps) => {
           <option {...optionProps} key={key}> {item} </option>
         );
       })}
-    </select>
+    </SelectWrapper>
   );
 };
 

@@ -5,11 +5,13 @@ import lessModules from '@kkt/less-modules';
 import rawModules from '@kkt/raw-modules';
 import scopePluginOptions from '@kkt/scope-plugin-options';
 import MonacoWebpackPlugin from 'monaco-editor-webpack-plugin';
+import { mdCodeModulesLoader } from 'markdown-react-code-preview-loader';
 import pkg from './package.json';
 
 export default (conf: Configuration, env: 'production' | 'development', options: LoaderConfOptions) => {
   conf = lessModules(conf, env, options);
   conf = rawModules(conf, env, { ...options, test: /\.(md|txt)$/i });
+  conf = mdCodeModulesLoader(conf);
   conf = scopePluginOptions(conf, env, {
     ...options,
     allowedFiles: [
@@ -26,6 +28,7 @@ export default (conf: Configuration, env: 'production' | 'development', options:
   conf.plugins!.push(new webpack.DefinePlugin({
     VERSION: JSON.stringify(pkg.version),
   }));
+  conf.module!.exprContextCritical = false;
   if (env === 'production') {
     conf.output = { ...conf.output, publicPath: './' };
     conf.optimization = {
