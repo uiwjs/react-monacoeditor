@@ -9,8 +9,10 @@ react-monacoeditor
 
 [Monaco Editor](https://github.com/Microsoft/monaco-editor) component for React. demo @[jaywcjlove.github.io/react-monacoeditor/](https://jaywcjlove.github.io/react-monacoeditor/)  
 
+<!--rehype:ignore:start-->
 <a href="https://jaywcjlove.github.io/react-monacoeditor/"><img src="https://raw.githubusercontent.com/jaywcjlove/react-monacoeditor/master/react-monacoeditor.png" /></a>
 
+<!--rehype:ignore:end-->
 <!--dividing-->
 
 ## Installation
@@ -23,17 +25,22 @@ npm install @uiw/react-monacoeditor --save
 
 [![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?logo=codesandbox)](https://codesandbox.io/embed/react-monacoeditor-example-hgqfj?fontsize=14&hidenavigation=1&theme=dark)
 
-```js
+```jsx mdx:preview
 import React from 'react';
 import MonacoEditor from '@uiw/react-monacoeditor';
 
-<MonacoEditor
-  language="html"
-  value="<h1>I ♥ react-monacoeditor</h1>"
-  options={{
-    theme: 'vs-dark',
-  }}
-/>
+export default function Demo() {
+  return (
+    <MonacoEditor
+      language="html"
+      value="<h1>I ♥ react-monacoeditor</h1>"
+      height="300px"
+      options={{
+        theme: 'vs-dark',
+      }}
+    />
+  );
+}
 ```
 
 ## Using with Webpack
