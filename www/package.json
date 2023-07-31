@@ -10,20 +10,20 @@
   "dependencies": {
     "@uiw/react-markdown-preview-example": "^1.5.6",
     "@uiw/react-monacoeditor": "3.5.8",
+    "monaco-editor": "^0.39.0",
     "code-example": "^3.3.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@kkt/raw-modules": "^7.5.1",
-    "@kkt/less-modules": "^7.5.1",
-    "@kkt/scope-plugin-options": "^7.5.1",
+    "@kkt/raw-modules": "^7.5.2",
+    "@kkt/scope-plugin-options": "^7.5.2",
     "@types/react": "^18.0.31",
     "@types/react-dom": "^18.0.11",
-    "kkt": "^7.5.1",
+    "kkt": "^7.5.2",
     "monaco-editor-webpack-plugin": "~7.0.1",
-    "markdown-react-code-preview-loader": "^2.1.2",
+    "markdown-react-code-preview-loader": "^2.1.7",
     "source-map-explorer": "^2.5.3"
   },
   "eslintConfig": {
