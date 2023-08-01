@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "version": "3.5.8",
+  "version": "3.5.9",
   "preview": true,
   "scripts": {
     "build": "kkt build",
@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "@uiw/react-markdown-preview-example": "^1.5.6",
-    "@uiw/react-monacoeditor": "3.5.8",
-    "monaco-editor": "^0.39.0",
+    "@uiw/react-monacoeditor": "3.5.9",
     "code-example": "^3.3.6",
+    "monaco-editor": "^0.39.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -22,8 +22,8 @@
     "@types/react": "^18.0.31",
     "@types/react-dom": "^18.0.11",
     "kkt": "^7.5.2",
-    "monaco-editor-webpack-plugin": "~7.0.1",
     "markdown-react-code-preview-loader": "^2.1.7",
+    "monaco-editor-webpack-plugin": "~7.0.1",
     "source-map-explorer": "^2.5.3"
   },
   "eslintConfig": {

@@ -7,7 +7,7 @@ import Select from './Select';
 const Wrapper = styled.div`
   header {
     background-color: var(--color-theme-bg);
-    padding: 0 20px 40px 20px;
+    padding: 0 0 0 0;
     position: relative;
     z-index: 9;
     text-align: center;
