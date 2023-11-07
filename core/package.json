@@ -1,6 +1,6 @@
 {
   "name": "@uiw/react-monacoeditor",
-  "version": "3.5.9",
+  "version": "3.6.0",
   "description": "Monaco Editor component for React.",
   "homepage": "https://uiwjs.github.io/react-monacoeditor/",
   "main": "lib/index.js",
