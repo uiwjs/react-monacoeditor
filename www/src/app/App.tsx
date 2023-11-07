@@ -66,7 +66,7 @@ export default function Example() {
   const [mode, setMode] = useState('javascript');
   const [hyperlink] = useState<Record<'href' | 'label', string>[]>([
     {
-      href: 'https://github.com/jaywcjlove/react-monacoeditor',
+      href: 'https://github.com/uiwjs/react-monacoeditor',
       label: 'View on GitHub',
     },
     {

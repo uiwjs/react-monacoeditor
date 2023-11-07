@@ -21,7 +21,7 @@ root.render(
       }
     }}
   >
-    <Github href="https://github.com/jaywcjlove/react-monacoeditor" />
+    <Github href="https://github.com/uiwjs/react-monacoeditor" />
     <Example>
       <App />
     </Example>

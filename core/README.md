@@ -1,16 +1,16 @@
 react-monacoeditor
 ===
 
-[![CI](https://github.com/jaywcjlove/react-monacoeditor/actions/workflows/ci.yml/badge.svg)](https://github.com/jaywcjlove/react-monacoeditor/actions/workflows/ci.yml)
+[![CI](https://github.com/uiwjs/react-monacoeditor/actions/workflows/ci.yml/badge.svg)](https://github.com/uiwjs/react-monacoeditor/actions/workflows/ci.yml)
 [![jsDelivr CDN](https://data.jsdelivr.com/v1/package/npm/@uiw/react-monacoeditor/badge?style=rounded)](https://www.jsdelivr.com/package/npm/@uiw/react-monacoeditor)
 [![Downloads](https://img.shields.io/npm/dm/@uiw/react-monacoeditor.svg?style=flat)](https://www.npmjs.com/package/@uiw/react-monacoeditor)
 [![Open in unpkg](https://img.shields.io/badge/Open%20in-unpkg-blue)](https://uiwjs.github.io/npm-unpkg/#/pkg/@uiw/react-monacoeditor/file/README.md)
 [![npm version](https://img.shields.io/npm/v/@uiw/react-monacoeditor.svg)](https://www.npmjs.com/package/@uiw/react-monacoeditor)
 
-[Monaco Editor](https://github.com/Microsoft/monaco-editor) component for React. demo @[jaywcjlove.github.io/react-monacoeditor/](https://jaywcjlove.github.io/react-monacoeditor/)  
+[Monaco Editor](https://github.com/Microsoft/monaco-editor) component for React. demo @[uiwjs.github.io/react-monacoeditor/](https://uiwjs.github.io/react-monacoeditor/)  
 
 <!--rehype:ignore:start-->
-<a href="https://jaywcjlove.github.io/react-monacoeditor/"><img src="https://raw.githubusercontent.com/jaywcjlove/react-monacoeditor/master/react-monacoeditor.png" /></a>
+<a href="https://uiwjs.github.io/react-monacoeditor/"><img src="https://raw.githubusercontent.com/jaywcjlove/react-monacoeditor/master/react-monacoeditor.png" /></a>
 
 <!--rehype:ignore:end-->
 <!--dividing-->
@@ -158,7 +158,7 @@ Otherwise, it behaves in uncontrolled mode.
 - `options` refer to [Monaco interface IEditorConstructionOptions](https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IEditorConstructionOptions.html).
 - `editorDidMount(editor, monaco)` an event emitted when the editor has been mounted (similar to `componentDidMount` of React).
 - `onChange(newValue, event)` an event emitted when the content of the current model has changed.
-- `autoComplete?: (model: monaco.editor.ITextModel, position: monaco.Position) => languages.CompletionItem[];` User provided extension function provider for auto-complete. [#47](https://github.com/jaywcjlove/react-monacoeditor/pull/47)
+- `autoComplete?: (model: monaco.editor.ITextModel, position: monaco.Position) => languages.CompletionItem[];` User provided extension function provider for auto-complete. [#47](https://github.com/uiwjs/react-monacoeditor/pull/47)
 
 ## Events & Methods
 
@@ -168,7 +168,6 @@ Refer to [Monaco interface IEditor](https://microsoft.github.io/monaco-editor/ap
 
 - [@uiw/react-textarea-code-editor](https://github.com/uiwjs/react-textarea-code-editor): A simple code editor with syntax highlighting.
 - [@uiw/react-codemirror](https://github.com/uiwjs/react-codemirror): CodeMirror component for React. @codemirror
-- [@uiw/react-monacoeditor](https://github.com/jaywcjlove/react-monacoeditor): Monaco Editor component for React.
 - [@uiw/react-markdown-editor](https://github.com/uiwjs/react-markdown-editor): A markdown editor with preview, implemented with React.js and TypeScript.
 - [@uiw/react-md-editor](https://github.com/uiwjs/react-md-editor): A simple markdown editor with preview, implemented with React.js and TypeScript.
 - [@uiw/react-markdown-preview](https://github.com/uiwjs/react-markdown-preview): React component preview markdown text in web browser. 
@@ -178,8 +177,8 @@ Refer to [Monaco interface IEditor](https://microsoft.github.io/monaco-editor/ap
 
 As always, thanks to our amazing contributors!
 
-<a href="https://github.com/jaywcjlove/react-monacoeditor/graphs/contributors">
-  <img src="https://jaywcjlove.github.io/react-monacoeditor/CONTRIBUTORS.svg" />
+<a href="https://github.com/uiwjs/react-monacoeditor/graphs/contributors">
+  <img src="https://uiwjs.github.io/react-monacoeditor/CONTRIBUTORS.svg" />
 </a>
 
 Made with [github-action-contributors](https://github.com/jaywcjlove/github-action-contributors).
