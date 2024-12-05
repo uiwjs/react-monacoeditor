@@ -12,15 +12,15 @@
     "@uiw/react-monacoeditor": "3.6.0",
     "code-example": "^3.3.6",
     "monaco-editor": "^0.44.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@kkt/raw-modules": "^7.5.2",
     "@kkt/scope-plugin-options": "^7.5.2",
-    "@types/react": "^18.0.31",
-    "@types/react-dom": "^18.0.11",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "kkt": "^7.5.2",
     "markdown-react-code-preview-loader": "^2.1.7",
     "monaco-editor-webpack-plugin": "~7.1.0",
