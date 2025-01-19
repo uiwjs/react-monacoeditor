@@ -86,13 +86,6 @@ function MonacoEditor(props: MonacoEditorProps, ref: React.ForwardedRef<RefEdito
       $editor.current.setValue(val);
     }
   }, [val])
-  useEffect(() => {
-    return () => {
-      if($editor.current) {
-        $editor.current.dispose()
-      }
-    }
-  }, []);
 
   useEffect(() => {
     if (options.theme) {
@@ -162,6 +155,11 @@ function MonacoEditor(props: MonacoEditorProps, ref: React.ForwardedRef<RefEdito
           throw new Error('Failed to load font codicon!!');
         }
       });
+    } else {
+      if ($editor.current) {
+        $editor.current.dispose();
+        $editor.current = undefined;
+      }
     }
   }, []);
 
